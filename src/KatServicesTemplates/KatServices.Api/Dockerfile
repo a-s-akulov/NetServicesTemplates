@@ -13,21 +13,21 @@ FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
 COPY ["NuGet.config", "NuGet.config"]
-COPY ["WBReturnsScheduleJobs/WBReturnsScheduleJobs.csproj", "WBReturnsScheduleJobs/"]
-COPY ["WBReturnsServices.Common/WBReturnsServices.Common.csproj", "WBReturnsServices.Common/"]
-COPY ["WBReturnsDB/WBReturnsDB.csproj", "WBReturnsDB/"]
-RUN dotnet restore "./WBReturnsScheduleJobs/WBReturnsScheduleJobs.csproj"
+COPY ["KatServices.Api/KatServices.Api.csproj", "KatServices.Api/"]
+COPY ["KatServices.Common/KatServices.Common.csproj", "KatServices.Common/"]
+COPY ["KatServices.Db/KatServices.Db.csproj", "KatServices.Db/"]
+RUN dotnet restore "./KatServices.Api/KatServices.Api.csproj"
 COPY . .
-WORKDIR "/src/WBReturnsScheduleJobs"
-RUN dotnet build "./WBReturnsScheduleJobs.csproj" -c $BUILD_CONFIGURATION -o /app/build
+WORKDIR "/src/KatServices.Api"
+RUN dotnet build "./KatServices.Api.csproj" -c $BUILD_CONFIGURATION -o /app/build
 
 # Этот этап используется для публикации проекта службы, который будет скопирован на последний этап
 FROM build AS publish
 ARG BUILD_CONFIGURATION=Release
-RUN dotnet publish "./WBReturnsScheduleJobs.csproj" -c $BUILD_CONFIGURATION -o /app/publish /p:UseAppHost=false
+RUN dotnet publish "./KatServices.Api.csproj" -c $BUILD_CONFIGURATION -o /app/publish /p:UseAppHost=false
 
 # Этот этап используется в рабочей среде или при запуске из VS в обычном режиме (по умолчанию, когда конфигурация отладки не используется)
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
-ENTRYPOINT ["dotnet", "WBReturnsScheduleJobs.dll"]
+ENTRYPOINT ["dotnet", "KatServices.Api.dll"]
