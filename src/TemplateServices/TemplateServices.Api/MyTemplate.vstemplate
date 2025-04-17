@@ -1,0 +1,166 @@
+<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Project">
+  <TemplateData>
+    <Name>TemplateServices.Api</Name>
+    <Description>&lt;Нет описания&gt;</Description>
+    <ProjectType>CSharp</ProjectType>
+    <ProjectSubType>
+    </ProjectSubType>
+    <SortOrder>1000</SortOrder>
+    <CreateNewFolder>true</CreateNewFolder>
+    <DefaultName>TemplateServices.Api</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <LocationField>Enabled</LocationField>
+    <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+    <CreateInPlace>true</CreateInPlace>
+    <Icon>__TemplateIcon.ico</Icon>
+  </TemplateData>
+  <TemplateContent>
+    <Project TargetFileName="KatServices.Api.csproj" File="KatServices.Api.csproj" ReplaceParameters="true">
+      <Folder Name="Properties" TargetFolderName="Properties">
+        <ProjectItem ReplaceParameters="true" TargetFileName="launchSettings.json">launchSettings.json</ProjectItem>
+      </Folder>
+      <Folder Name="Auth" TargetFolderName="Auth">
+        <ProjectItem ReplaceParameters="true" TargetFileName="ApiAuthorizeAttribute.cs">ApiAuthorizeAttribute.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="enAppAction.cs">enAppAction.cs</ProjectItem>
+      </Folder>
+      <Folder Name="config" TargetFolderName="config">
+        <Folder Name="prod" TargetFolderName="prod">
+          <ProjectItem ReplaceParameters="true" TargetFileName="appsettings.json">appsettings.json</ProjectItem>
+        </Folder>
+        <Folder Name="stage" TargetFolderName="stage">
+          <ProjectItem ReplaceParameters="true" TargetFileName="appsettings.json">appsettings.json</ProjectItem>
+        </Folder>
+        <ProjectItem ReplaceParameters="true" TargetFileName="appsettings.json">appsettings.json</ProjectItem>
+      </Folder>
+      <Folder Name="Configuration" TargetFolderName="Configuration">
+        <Folder Name="!Middleware" TargetFolderName="!Middleware">
+          <ProjectItem ReplaceParameters="true" TargetFileName="ExceptionMiddleware.cs">ExceptionMiddleware.cs</ProjectItem>
+        </Folder>
+        <Folder Name="!Services" TargetFolderName="!Services">
+          <Folder Name="KatStorageService" TargetFolderName="KatStorageService">
+            <ProjectItem ReplaceParameters="true" TargetFileName="KatStorageDbServiceConfigurationHostingExtensions.cs">KatStorageDbServiceConfigurationHostingExtensions.cs</ProjectItem>
+          </Folder>
+          <Folder Name="PartnersService" TargetFolderName="PartnersService">
+            <ProjectItem ReplaceParameters="true" TargetFileName="PartnersApiServiceConfigurationHostingExtensions.cs">PartnersApiServiceConfigurationHostingExtensions.cs</ProjectItem>
+          </Folder>
+        </Folder>
+        <Folder Name="AccessApi" TargetFolderName="AccessApi">
+          <ProjectItem ReplaceParameters="true" TargetFileName="AccessApiConfigurationHostingExtensions.cs">AccessApiConfigurationHostingExtensions.cs</ProjectItem>
+        </Folder>
+        <Folder Name="ApiVersioning" TargetFolderName="ApiVersioning">
+          <ProjectItem ReplaceParameters="true" TargetFileName="ApiVersioningConfigurationHostingExtensions.cs">ApiVersioningConfigurationHostingExtensions.cs</ProjectItem>
+        </Folder>
+        <Folder Name="AutoMapper" TargetFolderName="AutoMapper">
+          <ProjectItem ReplaceParameters="true" TargetFileName="AutoMapperConfigurationHostingExtensions.cs">AutoMapperConfigurationHostingExtensions.cs</ProjectItem>
+        </Folder>
+        <Folder Name="Controllers" TargetFolderName="Controllers">
+          <ProjectItem ReplaceParameters="true" TargetFileName="ControllersConfigurationHostingExtensions.cs">ControllersConfigurationHostingExtensions.cs</ProjectItem>
+        </Folder>
+        <Folder Name="JsonSerializer" TargetFolderName="JsonSerializer">
+          <ProjectItem ReplaceParameters="true" TargetFileName="JsonSerializerConfigurationHostingExtensions.cs">JsonSerializerConfigurationHostingExtensions.cs</ProjectItem>
+        </Folder>
+        <Folder Name="MediatR" TargetFolderName="MediatR">
+          <Folder Name="Behaviors" TargetFolderName="Behaviors">
+            <ProjectItem ReplaceParameters="true" TargetFileName="LoggingAndTracingBehavior.cs">LoggingAndTracingBehavior.cs</ProjectItem>
+          </Folder>
+          <ProjectItem ReplaceParameters="true" TargetFileName="MediatRConfigurationHostingExtensions.cs">MediatRConfigurationHostingExtensions.cs</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="MediatrLog.cs">MediatrLog.cs</ProjectItem>
+        </Folder>
+        <Folder Name="OpenTelemetry" TargetFolderName="OpenTelemetry">
+          <ProjectItem ReplaceParameters="true" TargetFileName="OpenTelemetryConfigurationHostingExtensions.cs">OpenTelemetryConfigurationHostingExtensions.cs</ProjectItem>
+        </Folder>
+        <Folder Name="Serilog" TargetFolderName="Serilog">
+          <ProjectItem ReplaceParameters="true" TargetFileName="SerilogConfigurationHostingExtensions.cs">SerilogConfigurationHostingExtensions.cs</ProjectItem>
+        </Folder>
+        <Folder Name="Swagger" TargetFolderName="Swagger">
+          <Folder Name="Filters" TargetFolderName="Filters">
+            <ProjectItem ReplaceParameters="true" TargetFileName="EnumTypesSchemaFilter.cs">EnumTypesSchemaFilter.cs</ProjectItem>
+            <ProjectItem ReplaceParameters="true" TargetFileName="NullableEnumerableElementsFixSchemaFilter.cs">NullableEnumerableElementsFixSchemaFilter.cs</ProjectItem>
+            <ProjectItem ReplaceParameters="true" TargetFileName="OperationsParametersEnumDescriptionFromSchemaDescriptionFilter.cs">OperationsParametersEnumDescriptionFromSchemaDescriptionFilter.cs</ProjectItem>
+          </Folder>
+          <ProjectItem ReplaceParameters="true" TargetFileName="ConfigureSwaggerOptions.cs">ConfigureSwaggerOptions.cs</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="SwaggerConfigurationHostingExtensions.cs">SwaggerConfigurationHostingExtensions.cs</ProjectItem>
+        </Folder>
+        <ProjectItem ReplaceParameters="true" TargetFileName="OptionsConfigurationHostingExtensions.cs">OptionsConfigurationHostingExtensions.cs</ProjectItem>
+      </Folder>
+      <Folder Name="Controllers" TargetFolderName="Controllers">
+        <Folder Name="!Base" TargetFolderName="!Base">
+          <ProjectItem ReplaceParameters="true" TargetFileName="ControllerInAppBase.cs">ControllerInAppBase.cs</ProjectItem>
+        </Folder>
+        <Folder Name="V1" TargetFolderName="V1">
+          <Folder Name="MyAwesomeProducts" TargetFolderName="MyAwesomeProducts">
+            <ProjectItem ReplaceParameters="true" TargetFileName="MyAwesomeProductsV1Controller.cs">MyAwesomeProductsV1Controller.cs</ProjectItem>
+          </Folder>
+          <Folder Name="Partners" TargetFolderName="Partners">
+            <ProjectItem ReplaceParameters="true" TargetFileName="PartnersV1Controller.cs">PartnersV1Controller.cs</ProjectItem>
+          </Folder>
+        </Folder>
+      </Folder>
+      <Folder Name="DTO" TargetFolderName="DTO">
+        <Folder Name="V1" TargetFolderName="V1">
+          <Folder Name="MyAwesomeProducts" TargetFolderName="MyAwesomeProducts">
+            <Folder Name="AddOrUpdateProduct" TargetFolderName="AddOrUpdateProduct">
+              <ProjectItem ReplaceParameters="true" TargetFileName="AddOrUpdateProductRequest.cs">AddOrUpdateProductRequest.cs</ProjectItem>
+              <ProjectItem ReplaceParameters="true" TargetFileName="AddOrUpdateProductResponse.cs">AddOrUpdateProductResponse.cs</ProjectItem>
+            </Folder>
+            <Folder Name="DeleteProduct" TargetFolderName="DeleteProduct">
+              <ProjectItem ReplaceParameters="true" TargetFileName="DeleteProductRequest.cs">DeleteProductRequest.cs</ProjectItem>
+              <ProjectItem ReplaceParameters="true" TargetFileName="DeleteProductResponse.cs">DeleteProductResponse.cs</ProjectItem>
+            </Folder>
+            <Folder Name="GetProduct" TargetFolderName="GetProduct">
+              <ProjectItem ReplaceParameters="true" TargetFileName="GetProductRequest.cs">GetProductRequest.cs</ProjectItem>
+              <ProjectItem ReplaceParameters="true" TargetFileName="GetProductResponse.cs">GetProductResponse.cs</ProjectItem>
+            </Folder>
+            <Folder Name="GetProducts" TargetFolderName="GetProducts">
+              <ProjectItem ReplaceParameters="true" TargetFileName="GetProductsRequest.cs">GetProductsRequest.cs</ProjectItem>
+              <ProjectItem ReplaceParameters="true" TargetFileName="GetProductsResponse.cs">GetProductsResponse.cs</ProjectItem>
+            </Folder>
+          </Folder>
+          <Folder Name="Partners" TargetFolderName="Partners">
+            <Folder Name="GetPartner" TargetFolderName="GetPartner">
+              <ProjectItem ReplaceParameters="true" TargetFileName="GetPartnerRequest.cs">GetPartnerRequest.cs</ProjectItem>
+              <ProjectItem ReplaceParameters="true" TargetFileName="GetPartnerResponse.cs">GetPartnerResponse.cs</ProjectItem>
+            </Folder>
+            <Folder Name="GetPartners" TargetFolderName="GetPartners">
+              <ProjectItem ReplaceParameters="true" TargetFileName="GetPartnersRequest.cs">GetPartnersRequest.cs</ProjectItem>
+              <ProjectItem ReplaceParameters="true" TargetFileName="GetPartnersResponse.cs">GetPartnersResponse.cs</ProjectItem>
+            </Folder>
+          </Folder>
+        </Folder>
+      </Folder>
+      <Folder Name="Enums" TargetFolderName="Enums" />
+      <Folder Name="Mappers" TargetFolderName="Mappers" />
+      <Folder Name="Models" TargetFolderName="Models" />
+      <Folder Name="Options" TargetFolderName="Options">
+        <ProjectItem ReplaceParameters="true" TargetFileName="AppOptions.cs">AppOptions.cs</ProjectItem>
+      </Folder>
+      <Folder Name="RequestHandlers" TargetFolderName="RequestHandlers">
+        <Folder Name="!Base" TargetFolderName="!Base">
+          <ProjectItem ReplaceParameters="true" TargetFileName="RequestHandlerBase.cs">RequestHandlerBase.cs</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="RequestHandlerBasePagedT.cs">RequestHandlerBasePagedT.cs</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="RequestHandlerBaseT.cs">RequestHandlerBaseT.cs</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="RequestHandlerException.cs">RequestHandlerException.cs</ProjectItem>
+        </Folder>
+        <Folder Name="V1" TargetFolderName="V1">
+          <Folder Name="MyAwesomeProducts" TargetFolderName="MyAwesomeProducts">
+            <Folder Name="Mappers" TargetFolderName="Mappers">
+              <ProjectItem ReplaceParameters="true" TargetFileName="MyAwesomeProductDtoMappingProfile.cs">MyAwesomeProductDtoMappingProfile.cs</ProjectItem>
+            </Folder>
+            <ProjectItem ReplaceParameters="true" TargetFileName="AddOrUpdateProductV1RequestHandler.cs">AddOrUpdateProductV1RequestHandler.cs</ProjectItem>
+            <ProjectItem ReplaceParameters="true" TargetFileName="DeleteProductV1RequestHandler.cs">DeleteProductV1RequestHandler.cs</ProjectItem>
+            <ProjectItem ReplaceParameters="true" TargetFileName="GetProductsV1RequestHandler.cs">GetProductsV1RequestHandler.cs</ProjectItem>
+            <ProjectItem ReplaceParameters="true" TargetFileName="GetProductV1RequestHandler.cs">GetProductV1RequestHandler.cs</ProjectItem>
+          </Folder>
+          <Folder Name="Partners" TargetFolderName="Partners">
+            <ProjectItem ReplaceParameters="true" TargetFileName="GetPartnersV1RequestHandler.cs">GetPartnersV1RequestHandler.cs</ProjectItem>
+            <ProjectItem ReplaceParameters="true" TargetFileName="GetPartnerV1RequestHandler.cs">GetPartnerV1RequestHandler.cs</ProjectItem>
+          </Folder>
+        </Folder>
+      </Folder>
+      <Folder Name="Services" TargetFolderName="Services" />
+      <ProjectItem ReplaceParameters="false" TargetFileName="Dockerfile">Dockerfile</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Program.cs">Program.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Startup.cs">Startup.cs</ProjectItem>
+    </Project>
+  </TemplateContent>
+</VSTemplate>

@@ -1,0 +1,56 @@
+<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Project">
+  <TemplateData>
+    <Name>TemplateServices.Db</Name>
+    <Description>&lt;Нет описания&gt;</Description>
+    <ProjectType>CSharp</ProjectType>
+    <ProjectSubType>
+    </ProjectSubType>
+    <SortOrder>1000</SortOrder>
+    <CreateNewFolder>true</CreateNewFolder>
+    <DefaultName>TemplateServices.Db</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <LocationField>Enabled</LocationField>
+    <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+    <CreateInPlace>true</CreateInPlace>
+    <Icon>__TemplateIcon.ico</Icon>
+  </TemplateData>
+  <TemplateContent>
+    <Project TargetFileName="KatServices.Db.csproj" File="KatServices.Db.csproj" ReplaceParameters="true">
+      <Folder Name="Context" TargetFolderName="Context">
+        <Folder Name="Configurations" TargetFolderName="Configurations">
+          <Folder Name="Base" TargetFolderName="Base">
+            <ProjectItem ReplaceParameters="true" TargetFileName="LogEntityConfiguration.cs">LogEntityConfiguration.cs</ProjectItem>
+          </Folder>
+          <ProjectItem ReplaceParameters="true" TargetFileName="LogReturnClaimConfiguration.cs">LogReturnClaimConfiguration.cs</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="MyAwesomeProductConfiguration.cs">MyAwesomeProductConfiguration.cs</ProjectItem>
+        </Folder>
+        <ProjectItem ReplaceParameters="true" TargetFileName="KatDbContext.cs">KatDbContext.cs</ProjectItem>
+      </Folder>
+      <Folder Name="Entities" TargetFolderName="Entities">
+        <Folder Name="Base" TargetFolderName="Base">
+          <ProjectItem ReplaceParameters="true" TargetFileName="enLogOperation.cs">enLogOperation.cs</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="IEntityWithLogs.cs">IEntityWithLogs.cs</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="ILogEntity.cs">ILogEntity.cs</ProjectItem>
+        </Folder>
+        <Folder Name="Enums" TargetFolderName="Enums">
+          <ProjectItem ReplaceParameters="true" TargetFileName="enAwesomeProductType.cs">enAwesomeProductType.cs</ProjectItem>
+        </Folder>
+        <ProjectItem ReplaceParameters="true" TargetFileName="LogMyAwesomeProduct.cs">LogMyAwesomeProduct.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="MyAwesomeProduct.cs">MyAwesomeProduct.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="MyAwesomeProductBase.cs">MyAwesomeProductBase.cs</ProjectItem>
+      </Folder>
+      <Folder Name="Migrations" TargetFolderName="Migrations">
+        <Folder Name="Base" TargetFolderName="Base">
+          <ProjectItem ReplaceParameters="true" TargetFileName="QuartsPostgresInitialScript.sql">QuartsPostgresInitialScript.sql</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="QuartzPostgresInitialMigration.cs">QuartzPostgresInitialMigration.cs</ProjectItem>
+        </Folder>
+        <ProjectItem ReplaceParameters="true" TargetFileName="20250414112833_InitialCommit.cs">20250414112833_InitialCommit.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="20250414112833_InitialCommit.Designer.cs">20250414112833_InitialCommit.Designer.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="20250414112852_QuartzInitialCommit.cs">20250414112852_QuartzInitialCommit.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="20250414112852_QuartzInitialCommit.Designer.cs">20250414112852_QuartzInitialCommit.Designer.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="KatDbContextModelSnapshot.cs">KatDbContextModelSnapshot.cs</ProjectItem>
+      </Folder>
+      <ProjectItem ReplaceParameters="true" TargetFileName="DesignTimeContextFactory.cs">DesignTimeContextFactory.cs</ProjectItem>
+    </Project>
+  </TemplateContent>
+</VSTemplate>

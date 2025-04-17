@@ -1,0 +1,100 @@
+<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Project">
+  <TemplateData>
+    <Name>TemplateServices.ScheduleJobs</Name>
+    <Description>&lt;Нет описания&gt;</Description>
+    <ProjectType>CSharp</ProjectType>
+    <ProjectSubType>
+    </ProjectSubType>
+    <SortOrder>1000</SortOrder>
+    <CreateNewFolder>true</CreateNewFolder>
+    <DefaultName>TemplateServices.ScheduleJobs</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <LocationField>Enabled</LocationField>
+    <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+    <CreateInPlace>true</CreateInPlace>
+    <Icon>__TemplateIcon.ico</Icon>
+  </TemplateData>
+  <TemplateContent>
+    <Project TargetFileName="KatServices.ScheduleJobs.csproj" File="KatServices.ScheduleJobs.csproj" ReplaceParameters="true">
+      <Folder Name="Properties" TargetFolderName="Properties">
+        <ProjectItem ReplaceParameters="true" TargetFileName="launchSettings.json">launchSettings.json</ProjectItem>
+      </Folder>
+      <Folder Name="Auth" TargetFolderName="Auth">
+        <ProjectItem ReplaceParameters="true" TargetFileName="ApiAuthorizeAttribute.cs">ApiAuthorizeAttribute.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="enAppAction.cs">enAppAction.cs</ProjectItem>
+      </Folder>
+      <Folder Name="config" TargetFolderName="config">
+        <Folder Name="prod" TargetFolderName="prod">
+          <ProjectItem ReplaceParameters="true" TargetFileName="appsettings.json">appsettings.json</ProjectItem>
+        </Folder>
+        <Folder Name="stage" TargetFolderName="stage">
+          <ProjectItem ReplaceParameters="true" TargetFileName="appsettings.json">appsettings.json</ProjectItem>
+        </Folder>
+        <ProjectItem ReplaceParameters="true" TargetFileName="appsettings.json">appsettings.json</ProjectItem>
+      </Folder>
+      <Folder Name="Configuration" TargetFolderName="Configuration">
+        <Folder Name="!Middleware" TargetFolderName="!Middleware">
+          <ProjectItem ReplaceParameters="true" TargetFileName="ExceptionMiddleware.cs">ExceptionMiddleware.cs</ProjectItem>
+        </Folder>
+        <Folder Name="!Services" TargetFolderName="!Services">
+          <Folder Name="KatStorageService" TargetFolderName="KatStorageService">
+            <ProjectItem ReplaceParameters="true" TargetFileName="KatStorageDbServiceConfigurationHostingExtensions.cs">KatStorageDbServiceConfigurationHostingExtensions.cs</ProjectItem>
+          </Folder>
+          <Folder Name="PartnersService" TargetFolderName="PartnersService">
+            <ProjectItem ReplaceParameters="true" TargetFileName="PartnersApiServiceConfigurationHostingExtensions.cs">PartnersApiServiceConfigurationHostingExtensions.cs</ProjectItem>
+          </Folder>
+        </Folder>
+        <Folder Name="AccessApi" TargetFolderName="AccessApi">
+          <ProjectItem ReplaceParameters="true" TargetFileName="AccessApiConfigurationHostingExtensions.cs">AccessApiConfigurationHostingExtensions.cs</ProjectItem>
+        </Folder>
+        <Folder Name="ApiVersioning" TargetFolderName="ApiVersioning">
+          <ProjectItem ReplaceParameters="true" TargetFileName="ApiVersioningConfigurationHostingExtensions.cs">ApiVersioningConfigurationHostingExtensions.cs</ProjectItem>
+        </Folder>
+        <Folder Name="AutoMapper" TargetFolderName="AutoMapper">
+          <ProjectItem ReplaceParameters="true" TargetFileName="AutoMapperConfigurationHostingExtensions.cs">AutoMapperConfigurationHostingExtensions.cs</ProjectItem>
+        </Folder>
+        <Folder Name="JsonSerializer" TargetFolderName="JsonSerializer">
+          <ProjectItem ReplaceParameters="true" TargetFileName="JsonSerializerConfigurationHostingExtensions.cs">JsonSerializerConfigurationHostingExtensions.cs</ProjectItem>
+        </Folder>
+        <Folder Name="OpenTelemetry" TargetFolderName="OpenTelemetry">
+          <ProjectItem ReplaceParameters="true" TargetFileName="OpenTelemetryConfigurationHostingExtensions.cs">OpenTelemetryConfigurationHostingExtensions.cs</ProjectItem>
+        </Folder>
+        <Folder Name="Quartz" TargetFolderName="Quartz">
+          <ProjectItem ReplaceParameters="true" TargetFileName="QuartzConfigurationHostingExtensions.cs">QuartzConfigurationHostingExtensions.cs</ProjectItem>
+        </Folder>
+        <Folder Name="Serilog" TargetFolderName="Serilog">
+          <ProjectItem ReplaceParameters="true" TargetFileName="SerilogConfigurationHostingExtensions.cs">SerilogConfigurationHostingExtensions.cs</ProjectItem>
+        </Folder>
+        <Folder Name="Swagger" TargetFolderName="Swagger">
+          <Folder Name="Filters" TargetFolderName="Filters">
+            <ProjectItem ReplaceParameters="true" TargetFileName="EnumTypesSchemaFilter.cs">EnumTypesSchemaFilter.cs</ProjectItem>
+            <ProjectItem ReplaceParameters="true" TargetFileName="NullableEnumerableElementsFixSchemaFilter.cs">NullableEnumerableElementsFixSchemaFilter.cs</ProjectItem>
+            <ProjectItem ReplaceParameters="true" TargetFileName="OperationsParametersEnumDescriptionFromSchemaDescriptionFilter.cs">OperationsParametersEnumDescriptionFromSchemaDescriptionFilter.cs</ProjectItem>
+          </Folder>
+          <ProjectItem ReplaceParameters="true" TargetFileName="ConfigureSwaggerOptions.cs">ConfigureSwaggerOptions.cs</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="SwaggerConfigurationHostingExtensions.cs">SwaggerConfigurationHostingExtensions.cs</ProjectItem>
+        </Folder>
+        <ProjectItem ReplaceParameters="true" TargetFileName="OptionsConfigurationHostingExtensions.cs">OptionsConfigurationHostingExtensions.cs</ProjectItem>
+      </Folder>
+      <Folder Name="Jobs" TargetFolderName="Jobs">
+        <Folder Name="!Base" TargetFolderName="!Base">
+          <ProjectItem ReplaceParameters="true" TargetFileName="IScheduleJob.cs">IScheduleJob.cs</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="ScheduleJobBase.cs">ScheduleJobBase.cs</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="ScheduleJobBaseLog.cs">ScheduleJobBaseLog.cs</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="ScheduleJobException.cs">ScheduleJobException.cs</ProjectItem>
+        </Folder>
+        <Folder Name="MyAwesomeProductsImport" TargetFolderName="MyAwesomeProductsImport">
+          <ProjectItem ReplaceParameters="true" TargetFileName="MyAwesomeProductsImportJob.cs">MyAwesomeProductsImportJob.cs</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="MyAwesomeProductsImportMapperProfile.cs">MyAwesomeProductsImportMapperProfile.cs</ProjectItem>
+        </Folder>
+      </Folder>
+      <Folder Name="Options" TargetFolderName="Options">
+        <ProjectItem ReplaceParameters="true" TargetFileName="AppOptions.cs">AppOptions.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="ScheduleJobOptions.cs">ScheduleJobOptions.cs</ProjectItem>
+      </Folder>
+      <ProjectItem ReplaceParameters="false" TargetFileName="Dockerfile">Dockerfile</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Program.cs">Program.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Startup.cs">Startup.cs</ProjectItem>
+    </Project>
+  </TemplateContent>
+</VSTemplate>

@@ -1,0 +1,109 @@
+<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Project">
+  <TemplateData>
+    <Name>TemplateServices.Common</Name>
+    <Description>&lt;Нет описания&gt;</Description>
+    <ProjectType>CSharp</ProjectType>
+    <ProjectSubType>
+    </ProjectSubType>
+    <SortOrder>1000</SortOrder>
+    <CreateNewFolder>true</CreateNewFolder>
+    <DefaultName>TemplateServices.Common</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <LocationField>Enabled</LocationField>
+    <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+    <CreateInPlace>true</CreateInPlace>
+    <Icon>__TemplateIcon.ico</Icon>
+  </TemplateData>
+  <TemplateContent>
+    <Project TargetFileName="KatServices.Common.csproj" File="KatServices.Common.csproj" ReplaceParameters="true">
+      <Folder Name="Configuration" TargetFolderName="Configuration">
+        <Folder Name="!Services" TargetFolderName="!Services">
+          <Folder Name="KatStorageService" TargetFolderName="KatStorageService">
+            <ProjectItem ReplaceParameters="true" TargetFileName="KatStorageDbServiceConfigurationHostingExtensions.cs">KatStorageDbServiceConfigurationHostingExtensions.cs</ProjectItem>
+          </Folder>
+          <Folder Name="PartnersService" TargetFolderName="PartnersService">
+            <ProjectItem ReplaceParameters="true" TargetFileName="PartnersApiServiceConfigurationHostingExtensions.cs">PartnersApiServiceConfigurationHostingExtensions.cs</ProjectItem>
+          </Folder>
+        </Folder>
+        <Folder Name="AutoMapper" TargetFolderName="AutoMapper">
+          <ProjectItem ReplaceParameters="true" TargetFileName="AutoMapperConfigurationHostingExtensions.cs">AutoMapperConfigurationHostingExtensions.cs</ProjectItem>
+        </Folder>
+        <Folder Name="JsonSerializer" TargetFolderName="JsonSerializer">
+          <ProjectItem ReplaceParameters="true" TargetFileName="JsonSerializerConfigurationHostingExtensions.cs">JsonSerializerConfigurationHostingExtensions.cs</ProjectItem>
+        </Folder>
+        <ProjectItem ReplaceParameters="true" TargetFileName="OptionsConfigurationHostingExtensions.cs">OptionsConfigurationHostingExtensions.cs</ProjectItem>
+      </Folder>
+      <Folder Name="Extensions" TargetFolderName="Extensions">
+        <ProjectItem ReplaceParameters="true" TargetFileName="EnumExtensions.cs">EnumExtensions.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="ExceptionExtensions.cs">ExceptionExtensions.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="HttpClientExtensions.cs">HttpClientExtensions.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="MemoryCacheExtensions.cs">MemoryCacheExtensions.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="TaskExtensions.cs">TaskExtensions.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="TypeExtensions.cs">TypeExtensions.cs</ProjectItem>
+      </Folder>
+      <Folder Name="Models" TargetFolderName="Models">
+        <Folder Name="!Base" TargetFolderName="!Base">
+          <ProjectItem ReplaceParameters="true" TargetFileName="ApiError.cs">ApiError.cs</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="ApiPagedRequest.cs">ApiPagedRequest.cs</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="ApiPagedResponse.cs">ApiPagedResponse.cs</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="ApiPagination.cs">ApiPagination.cs</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="ApiPaginationRequest.cs">ApiPaginationRequest.cs</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="ApiRequest.cs">ApiRequest.cs</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="ApiResponse.cs">ApiResponse.cs</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="HandlerRequest.cs">HandlerRequest.cs</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="ScopedException.cs">ScopedException.cs</ProjectItem>
+        </Folder>
+        <Folder Name="!OpenAPI" TargetFolderName="!OpenAPI">
+          <ProjectItem ReplaceParameters="true" TargetFileName="ApiException.cs">ApiException.cs</ProjectItem>
+        </Folder>
+        <Folder Name="Enums" TargetFolderName="Enums" />
+      </Folder>
+      <Folder Name="Options" TargetFolderName="Options">
+        <Folder Name="!Base" TargetFolderName="!Base">
+          <ProjectItem ReplaceParameters="true" TargetFileName="AccessContextOptions.cs">AccessContextOptions.cs</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="ApiConnectionOptions.cs">ApiConnectionOptions.cs</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="BaseConnectionOptions.cs">BaseConnectionOptions.cs</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="DbConnectionOptions.cs">DbConnectionOptions.cs</ProjectItem>
+        </Folder>
+      </Folder>
+      <Folder Name="Services" TargetFolderName="Services">
+        <Folder Name="!Base" TargetFolderName="!Base">
+          <ProjectItem ReplaceParameters="true" TargetFileName="ServiceBase.cs">ServiceBase.cs</ProjectItem>
+        </Folder>
+        <Folder Name="!System" TargetFolderName="!System">
+          <Folder Name="JsonSerializerService" TargetFolderName="JsonSerializerService">
+            <Folder Name="Repository" TargetFolderName="Repository">
+              <ProjectItem ReplaceParameters="true" TargetFileName="SystemTextJsonSerializerService.cs">SystemTextJsonSerializerService.cs</ProjectItem>
+            </Folder>
+            <ProjectItem ReplaceParameters="true" TargetFileName="IJsonSerializerService.cs">IJsonSerializerService.cs</ProjectItem>
+          </Folder>
+        </Folder>
+        <Folder Name="KatStorageService" TargetFolderName="KatStorageService">
+          <Folder Name="Mappers" TargetFolderName="Mappers">
+            <ProjectItem ReplaceParameters="true" TargetFileName="BaseEntitiesMappingProfile.cs">BaseEntitiesMappingProfile.cs</ProjectItem>
+            <ProjectItem ReplaceParameters="true" TargetFileName="LogsMappingProfile.cs">LogsMappingProfile.cs</ProjectItem>
+          </Folder>
+          <Folder Name="Models" TargetFolderName="Models">
+            <ProjectItem ReplaceParameters="true" TargetFileName="TryAddOrUpdateBaseResult.cs">TryAddOrUpdateBaseResult.cs</ProjectItem>
+          </Folder>
+          <Folder Name="Repository" TargetFolderName="Repository">
+            <ProjectItem ReplaceParameters="true" TargetFileName="EntityExtesions.cs">EntityExtesions.cs</ProjectItem>
+            <ProjectItem ReplaceParameters="true" TargetFileName="KatStorageDbService.cs">KatStorageDbService.cs</ProjectItem>
+          </Folder>
+          <ProjectItem ReplaceParameters="true" TargetFileName="IKatStorageService.cs">IKatStorageService.cs</ProjectItem>
+        </Folder>
+        <Folder Name="PartnersService" TargetFolderName="PartnersService">
+          <Folder Name="Models" TargetFolderName="Models">
+            <ProjectItem ReplaceParameters="true" TargetFileName="PartnerOrsInfo.cs">PartnerOrsInfo.cs</ProjectItem>
+          </Folder>
+          <Folder Name="Repository" TargetFolderName="Repository">
+            <ProjectItem ReplaceParameters="true" TargetFileName="partnersApi.json">partnersApi.json</ProjectItem>
+            <ProjectItem ReplaceParameters="true" TargetFileName="partnersApi.json">vstg0001.json</ProjectItem>
+            <ProjectItem ReplaceParameters="true" TargetFileName="PartnersApiService.cs">PartnersApiService.cs</ProjectItem>
+          </Folder>
+          <ProjectItem ReplaceParameters="true" TargetFileName="IPartnersService.cs">IPartnersService.cs</ProjectItem>
+        </Folder>
+      </Folder>
+    </Project>
+  </TemplateContent>
+</VSTemplate>
