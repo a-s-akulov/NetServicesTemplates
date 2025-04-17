@@ -8,9 +8,9 @@
   </PropertyGroup>
 
 	<ItemGroup>
-		<OpenApiReference Include="Services\PartnersService\Repository\partnersApi.json" CodeGenerator="NSwagCSharp" Namespace="KatServices.Common.Services.PartnersService.Repository" ClassName="PartnersApiClient">
+		<OpenApiReference Include="Services\PartnersService\Repository\partnersApi.json" CodeGenerator="NSwagCSharp" Namespace="$ext_safeprojectname$Services.Common.Services.PartnersService.Repository" ClassName="PartnersApiClient">
 			<SourceUri>https://k8s.bookcentre.ru/partners/swagger/v3/swagger.json</SourceUri>
-			<Options>/UseBaseUrl:false /GenerateBaseUrlProperty:false /GenerateOptionalParameters:true /GenerateNullableReferenceTypes:true /ExceptionClass:"KatServices.Common.Models.OpenAPI.ApiException" /GenerateExceptionClasses:false /OperationGenerationMode:"SingleClientFromPathSegments" /DateType:"System.DateOnly" /TimeType:"System.TimeOnly"</Options>
+			<Options>/UseBaseUrl:false /GenerateBaseUrlProperty:false /GenerateOptionalParameters:true /GenerateNullableReferenceTypes:true /ExceptionClass:"$ext_safeprojectname$Services.Common.Models.OpenAPI.ApiException" /GenerateExceptionClasses:false /OperationGenerationMode:"SingleClientFromPathSegments" /DateType:"System.DateOnly" /TimeType:"System.TimeOnly"</Options>
 			<OutputPath>PartnersApiClient.cs</OutputPath>
 		</OpenApiReference>
 	</ItemGroup>
@@ -33,12 +33,12 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\KatServices.Db\KatServices.Db.csproj" />
+    <ProjectReference Include="..\$ext_safeprojectname$Services.Db\$ext_safeprojectname$Services.Db.csproj" />
   </ItemGroup>
 
 <ItemGroup>
-	<Using Include="KatServices.Common.Extensions" />
-	<Using Include="KatServices.Common.Models.Base" />
+	<Using Include="$ext_safeprojectname$Services.Common.Extensions" />
+	<Using Include="$ext_safeprojectname$Services.Common.Models.Base" />
 	<Using Include="Microsoft.Extensions.Logging" />
 </ItemGroup>
 

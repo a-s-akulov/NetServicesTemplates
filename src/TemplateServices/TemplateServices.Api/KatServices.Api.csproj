@@ -60,12 +60,12 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\KatServices.Common\KatServices.Common.csproj" />
+    <ProjectReference Include="..\$ext_safeprojectname$Services.Common\$ext_safeprojectname$Services.Common.csproj" />
   </ItemGroup>
 
   <ItemGroup>
-    <Using Include="KatServices.Common.Extensions" />
-    <Using Include="KatServices.Common.Models.Base" />
+    <Using Include="$ext_safeprojectname$Services.Common.Extensions" />
+    <Using Include="$ext_safeprojectname$Services.Common.Models.Base" />
   </ItemGroup>
 
 </Project>

@@ -15,7 +15,7 @@
     <Icon>__TemplateIcon.ico</Icon>
   </TemplateData>
   <TemplateContent>
-    <Project TargetFileName="KatServices.Db.csproj" File="KatServices.Db.csproj" ReplaceParameters="true">
+    <Project TargetFileName="$ext_safeprojectname$Services.Db.csproj" File="KatServices.Db.csproj" ReplaceParameters="true">
       <Folder Name="Context" TargetFolderName="Context">
         <Folder Name="Configurations" TargetFolderName="Configurations">
           <Folder Name="Base" TargetFolderName="Base">

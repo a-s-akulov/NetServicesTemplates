@@ -15,7 +15,7 @@
     <Icon>__TemplateIcon.ico</Icon>
   </TemplateData>
   <TemplateContent>
-    <Project TargetFileName="KatServices.Common.csproj" File="KatServices.Common.csproj" ReplaceParameters="true">
+    <Project TargetFileName="$ext_safeprojectname$Services.Common.csproj" File="KatServices.Common.csproj" ReplaceParameters="true">
       <Folder Name="Configuration" TargetFolderName="Configuration">
         <Folder Name="!Services" TargetFolderName="!Services">
           <Folder Name="KatStorageService" TargetFolderName="KatStorageService">

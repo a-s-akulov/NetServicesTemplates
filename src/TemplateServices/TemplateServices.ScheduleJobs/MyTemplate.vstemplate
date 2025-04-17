@@ -15,7 +15,7 @@
     <Icon>__TemplateIcon.ico</Icon>
   </TemplateData>
   <TemplateContent>
-    <Project TargetFileName="KatServices.ScheduleJobs.csproj" File="KatServices.ScheduleJobs.csproj" ReplaceParameters="true">
+    <Project TargetFileName="$ext_safeprojectname$Services.ScheduleJobs.csproj" File="KatServices.ScheduleJobs.csproj" ReplaceParameters="true">
       <Folder Name="Properties" TargetFolderName="Properties">
         <ProjectItem ReplaceParameters="true" TargetFileName="launchSettings.json">launchSettings.json</ProjectItem>
       </Folder>
