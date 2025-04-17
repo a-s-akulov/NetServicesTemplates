@@ -8,16 +8,16 @@
     </TemplateData>
     <TemplateContent>
         <ProjectCollection>
-            <ProjectTemplateLink ProjectName="$safeprojectname$Services.Api">
+            <ProjectTemplateLink ProjectName="$safeprojectname$Services.Api" CopyParameters="true">
                 TemplateServices.Api\MyTemplate.vstemplate
             </ProjectTemplateLink>
-            <ProjectTemplateLink ProjectName="$safeprojectname$Services.Common">
+            <ProjectTemplateLink ProjectName="$safeprojectname$Services.Common" CopyParameters="true">
                 TemplateServices.Common\MyTemplate.vstemplate
             </ProjectTemplateLink>
-            <ProjectTemplateLink ProjectName="$safeprojectname$Services.Db">
+            <ProjectTemplateLink ProjectName="$safeprojectname$Services.Db" CopyParameters="true">
                 TemplateServices.Db\MyTemplate.vstemplate
             </ProjectTemplateLink>
-            <ProjectTemplateLink ProjectName="$safeprojectname$Services.ScheduleJobs">
+            <ProjectTemplateLink ProjectName="$safeprojectname$Services.ScheduleJobs" CopyParameters="true">
                 TemplateServices.ScheduleJobs\MyTemplate.vstemplate
             </ProjectTemplateLink>
         </ProjectCollection>
