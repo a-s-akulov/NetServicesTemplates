@@ -56,7 +56,7 @@ public class DeleteProductV1RequestHandler : RequestHandlerBase<IKatStorageServi
     {
         Log.LogError(exception, "Failed to delete my awesome product with ID '{MyAwesomeProductId}'", request.Id);
         if (exception is KeyNotFoundException)
-            return new(null, System.Net.HttpStatusCode.NotFound, [exception.ToApiError()]);
+            return new(null, System.Net.HttpStatusCode.NotFound, [exception.ToApiError(statusCode: System.Net.HttpStatusCode.NotFound)]);
 
         return null;
     }

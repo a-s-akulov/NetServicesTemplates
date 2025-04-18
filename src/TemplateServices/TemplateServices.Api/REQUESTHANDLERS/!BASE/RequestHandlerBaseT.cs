@@ -8,6 +8,7 @@ namespace $safeprojectname$.RequestHandlers.Base;
 
 public abstract class RequestHandlerBase<TBaseService, TRequest, TResponse> : RequestHandlerBase, IRequestHandler<HandlerRequest<TRequest, ApiResponse<TResponse>>, ApiResponse<TResponse>>
                                                                 where TRequest : ApiRequest
+                                                                where TResponse : class
 {
     #region Конструкторы
 
@@ -55,10 +56,10 @@ public abstract class RequestHandlerBase<TBaseService, TRequest, TResponse> : Re
         catch (Exception ex)
         {
             var handleExceptionResult = HandleException(request, ex);
-            if (handleExceptionResult == null)
-                throw;
+            if (handleExceptionResult != null)
+                return handleExceptionResult;
 
-            return handleExceptionResult;
+            return new ApiResponse<TResponse>(null, System.Net.HttpStatusCode.InternalServerError, errors: ex.ToApiErrors(statusCode: System.Net.HttpStatusCode.InternalServerError));
         }
     }
 

@@ -5,6 +5,8 @@
         <Description>&lt;Нет описания&gt;</Description>
         <Icon>__TemplateIcon.ico</Icon>
         <ProjectType>CSharp</ProjectType>
+	    <CreateInPlace>true</CreateInPlace>
+	    <EnableLocationBrowseButton>false</EnableLocationBrowseButton>
     </TemplateData>
     <TemplateContent>
         <ProjectCollection>

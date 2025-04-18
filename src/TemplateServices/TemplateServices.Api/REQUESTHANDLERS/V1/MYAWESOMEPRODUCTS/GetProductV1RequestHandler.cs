@@ -57,7 +57,7 @@ public class GetProductV1RequestHandler : RequestHandlerBase<IKatStorageService,
     {
         Log.LogError(exception, "Failed to get my awesome product with ID '{MyAwesomeProductId}'", request.Id);
         if (exception is KeyNotFoundException)
-            return new(null, System.Net.HttpStatusCode.NotFound, [exception.ToApiError()]);
+            return new(null, System.Net.HttpStatusCode.NotFound, [exception.ToApiError(statusCode: System.Net.HttpStatusCode.NotFound)]);
 
         return null;
     }
