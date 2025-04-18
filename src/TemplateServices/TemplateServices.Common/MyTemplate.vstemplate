@@ -19,7 +19,7 @@
       <Folder Name="Configuration" TargetFolderName="Configuration">
         <Folder Name="!Services" TargetFolderName="!Services">
           <Folder Name="KatStorageService" TargetFolderName="$ext_safeprojectname$StorageService">
-            <ProjectItem ReplaceParameters="true" TargetFileName="$ext_safeprojectname$StorageDbServiceConfigurationHostingExtensions.cs">$ext_safeprojectname$StorageDbServiceConfigurationHostingExtensions.cs</ProjectItem>
+            <ProjectItem ReplaceParameters="true" TargetFileName="$ext_safeprojectname$StorageDbServiceConfigurationHostingExtensions.cs">KatStorageDbServiceConfigurationHostingExtensions.cs</ProjectItem>
           </Folder>
           <Folder Name="PartnersService" TargetFolderName="PartnersService">
             <ProjectItem ReplaceParameters="true" TargetFileName="PartnersApiServiceConfigurationHostingExtensions.cs">PartnersApiServiceConfigurationHostingExtensions.cs</ProjectItem>

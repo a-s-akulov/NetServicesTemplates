@@ -16,9 +16,6 @@
   </TemplateData>
   <TemplateContent>
     <Project TargetFileName="$ext_safeprojectname$Services.Api.csproj" File="KatServices.Api.csproj" ReplaceParameters="true">
-      <Folder Name="Properties" TargetFolderName="Properties">
-        <ProjectItem ReplaceParameters="true" TargetFileName="launchSettings.json">launchSettings.json</ProjectItem>
-      </Folder>
       <Folder Name="Auth" TargetFolderName="Auth">
         <ProjectItem ReplaceParameters="true" TargetFileName="ApiAuthorizeAttribute.cs">ApiAuthorizeAttribute.cs</ProjectItem>
         <ProjectItem ReplaceParameters="true" TargetFileName="enAppAction.cs">enAppAction.cs</ProjectItem>
