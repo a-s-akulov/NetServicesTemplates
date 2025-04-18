@@ -49,6 +49,7 @@ public class ExceptionMiddleware
         }
     }
 
+
     private async Task HandleExceptionAsync(HttpContext context, Exception exception)
     {
         context.Response.ContentType = MediaTypeNames.Application.Json;

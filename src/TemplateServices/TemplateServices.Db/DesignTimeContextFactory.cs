@@ -9,13 +9,13 @@ namespace $safeprojectname$;
 /// <summary>
 /// Фабрика для создания DbContext при создании миграций из Package Manager Console в DesignTime
 /// </summary>
-public class DesignTimeContextFactory : IDesignTimeDbContextFactory<KatDbContext>
+public class DesignTimeContextFactory : IDesignTimeDbContextFactory<$ext_safeprojectname$DbContext>
 {
-    public KatDbContext CreateDbContext(string[] args)
+    public $ext_safeprojectname$DbContext CreateDbContext(string[] args)
     {
-        var optionsBuilder = new DbContextOptionsBuilder<KatDbContext>();
+        var optionsBuilder = new DbContextOptionsBuilder<$ext_safeprojectname$DbContext>();
         optionsBuilder.UseNpgsql();
 
-        return new KatDbContext(optionsBuilder.Options);
+        return new $ext_safeprojectname$DbContext(optionsBuilder.Options);
     }
 }

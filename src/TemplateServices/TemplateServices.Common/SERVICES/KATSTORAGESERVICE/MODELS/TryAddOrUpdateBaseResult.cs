@@ -1,6 +1,6 @@
 ﻿
 
-namespace $safeprojectname$.Services.KatStorageService;
+namespace $safeprojectname$.Services.$ext_safeprojectname$StorageService;
 
 
 public record TryAddOrUpdateBaseResult<TEntity> where TEntity : class

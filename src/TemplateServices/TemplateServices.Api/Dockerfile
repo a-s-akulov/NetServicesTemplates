@@ -13,21 +13,21 @@ FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
 COPY ["NuGet.config", "NuGet.config"]
-COPY ["KatServices.Api/KatServices.Api.csproj", "KatServices.Api/"]
-COPY ["KatServices.Common/KatServices.Common.csproj", "KatServices.Common/"]
-COPY ["KatServices.Db/KatServices.Db.csproj", "KatServices.Db/"]
-RUN dotnet restore "./KatServices.Api/KatServices.Api.csproj"
+COPY ["$safeprojectname$/$safeprojectname$.csproj", "$safeprojectname$/"]
+COPY ["$ext_safeprojectname$Services.Common/$ext_safeprojectname$Services.Common.csproj", "$ext_safeprojectname$Services.Common/"]
+COPY ["$ext_safeprojectname$Services.Db/$ext_safeprojectname$Services.Db.csproj", "$ext_safeprojectname$Services.Db/"]
+RUN dotnet restore "./$safeprojectname$/$safeprojectname$.csproj"
 COPY . .
-WORKDIR "/src/KatServices.Api"
-RUN dotnet build "./KatServices.Api.csproj" -c $BUILD_CONFIGURATION -o /app/build
+WORKDIR "/src/$safeprojectname$"
+RUN dotnet build "./$safeprojectname$.csproj" -c $BUILD_CONFIGURATION -o /app/build
 
 # Этот этап используется для публикации проекта службы, который будет скопирован на последний этап
 FROM build AS publish
 ARG BUILD_CONFIGURATION=Release
-RUN dotnet publish "./KatServices.Api.csproj" -c $BUILD_CONFIGURATION -o /app/publish /p:UseAppHost=false
+RUN dotnet publish "./$safeprojectname$.csproj" -c $BUILD_CONFIGURATION -o /app/publish /p:UseAppHost=false
 
 # Этот этап используется в рабочей среде или при запуске из VS в обычном режиме (по умолчанию, когда конфигурация отладки не используется)
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
-ENTRYPOINT ["dotnet", "KatServices.Api.dll"]
+ENTRYPOINT ["dotnet", "$safeprojectname$.dll"]

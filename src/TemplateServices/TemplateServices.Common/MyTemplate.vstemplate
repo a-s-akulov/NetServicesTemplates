@@ -18,8 +18,8 @@
     <Project TargetFileName="$ext_safeprojectname$Services.Common.csproj" File="KatServices.Common.csproj" ReplaceParameters="true">
       <Folder Name="Configuration" TargetFolderName="Configuration">
         <Folder Name="!Services" TargetFolderName="!Services">
-          <Folder Name="KatStorageService" TargetFolderName="KatStorageService">
-            <ProjectItem ReplaceParameters="true" TargetFileName="KatStorageDbServiceConfigurationHostingExtensions.cs">KatStorageDbServiceConfigurationHostingExtensions.cs</ProjectItem>
+          <Folder Name="KatStorageService" TargetFolderName="$ext_safeprojectname$StorageService">
+            <ProjectItem ReplaceParameters="true" TargetFileName="$ext_safeprojectname$StorageDbServiceConfigurationHostingExtensions.cs">$ext_safeprojectname$StorageDbServiceConfigurationHostingExtensions.cs</ProjectItem>
           </Folder>
           <Folder Name="PartnersService" TargetFolderName="PartnersService">
             <ProjectItem ReplaceParameters="true" TargetFileName="PartnersApiServiceConfigurationHostingExtensions.cs">PartnersApiServiceConfigurationHostingExtensions.cs</ProjectItem>
@@ -78,7 +78,7 @@
             <ProjectItem ReplaceParameters="true" TargetFileName="IJsonSerializerService.cs">IJsonSerializerService.cs</ProjectItem>
           </Folder>
         </Folder>
-        <Folder Name="KatStorageService" TargetFolderName="KatStorageService">
+        <Folder Name="KatStorageService" TargetFolderName="$ext_safeprojectname$StorageService">
           <Folder Name="Mappers" TargetFolderName="Mappers">
             <ProjectItem ReplaceParameters="true" TargetFileName="BaseEntitiesMappingProfile.cs">BaseEntitiesMappingProfile.cs</ProjectItem>
             <ProjectItem ReplaceParameters="true" TargetFileName="LogsMappingProfile.cs">LogsMappingProfile.cs</ProjectItem>
@@ -88,9 +88,9 @@
           </Folder>
           <Folder Name="Repository" TargetFolderName="Repository">
             <ProjectItem ReplaceParameters="true" TargetFileName="EntityExtesions.cs">EntityExtesions.cs</ProjectItem>
-            <ProjectItem ReplaceParameters="true" TargetFileName="KatStorageDbService.cs">KatStorageDbService.cs</ProjectItem>
+            <ProjectItem ReplaceParameters="true" TargetFileName="$ext_safeprojectname$StorageDbService.cs">KatStorageDbService.cs</ProjectItem>
           </Folder>
-          <ProjectItem ReplaceParameters="true" TargetFileName="IKatStorageService.cs">IKatStorageService.cs</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="I$ext_safeprojectname$StorageService.cs">IKatStorageService.cs</ProjectItem>
         </Folder>
         <Folder Name="PartnersService" TargetFolderName="PartnersService">
           <Folder Name="Models" TargetFolderName="Models">

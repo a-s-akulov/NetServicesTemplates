@@ -69,7 +69,7 @@ public static class SwaggerConfigurationHostingExtensions
         builder.UseSwagger();
         builder.UseSwaggerUI(options =>
         {
-            options.DocumentTitle = "Kat API";
+            options.DocumentTitle = "$ext_safeprojectname$ API";
 
             var provider = builder.ApplicationServices.GetRequiredService<IApiVersionDescriptionProvider>();
 

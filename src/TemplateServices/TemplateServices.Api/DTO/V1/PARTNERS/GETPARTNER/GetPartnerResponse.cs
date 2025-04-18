@@ -1,4 +1,4 @@
-﻿using KatServices.Common.Services.PartnersService;
+﻿using $ext_safeprojectname$Services.Common.Services.PartnersService;
 
 
 namespace $safeprojectname$.DTO.V1.Partners;

@@ -5,9 +5,9 @@ using $safeprojectname$.Entities;
 namespace $safeprojectname$.Context;
 
 
-public class KatDbContext : DbContext
+public class $ext_safeprojectname$DbContext : DbContext
 {
-    public KatDbContext(DbContextOptions<KatDbContext> options)
+    public $ext_safeprojectname$DbContext(DbContextOptions<$ext_safeprojectname$DbContext> options)
         : base(options)
     { }
 

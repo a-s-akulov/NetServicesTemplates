@@ -9,9 +9,6 @@ using $safeprojectname$.DTO.V1.MyAwesomeProducts;
 namespace $safeprojectname$.Controllers.V1.MyAwesomeProducts;
 
 
-/// <summary>
-/// Asd
-/// </summary>
 [ApiVersion("1.0")]
 [Route("api/v{version:apiVersion}/my-awesome-products")]
 public partial class MyAwesomeProductsV1Controller : ControllerInAppBase

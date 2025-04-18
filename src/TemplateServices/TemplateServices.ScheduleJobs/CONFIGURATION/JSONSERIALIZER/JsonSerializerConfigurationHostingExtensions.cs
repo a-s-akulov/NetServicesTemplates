@@ -1,4 +1,4 @@
-﻿using KatServices.Common.Configuration;
+﻿using $ext_safeprojectname$Services.Common.Configuration;
 
 
 namespace $safeprojectname$.Configuration;

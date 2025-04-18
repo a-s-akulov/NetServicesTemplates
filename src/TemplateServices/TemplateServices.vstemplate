@@ -2,12 +2,15 @@
     xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
     <TemplateData>
         <Name>TemplateServices</Name>
+        <DefaultName>MyProject</DefaultName>
+        <ProvideDefaultName>true</ProvideDefaultName>
         <Description>&lt;Нет описания&gt;</Description>
         <Icon>__TemplateIcon.ico</Icon>
         <ProjectType>CSharp</ProjectType>
 	    <CreateInPlace>true</CreateInPlace>
-	    <EnableLocationBrowseButton>false</EnableLocationBrowseButton>
+	    <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
     </TemplateData>
+    
     <TemplateContent>
         <ProjectCollection>
             <ProjectTemplateLink ProjectName="$safeprojectname$Services.Api" CopyParameters="true">

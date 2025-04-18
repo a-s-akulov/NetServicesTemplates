@@ -25,7 +25,7 @@ public static class Startup
         builder.AddQuartzInApp(options);                                        // Quartz
 
         builder.AddPartnersApiServiceInApp(options);
-        builder.AddKatStorageDbServiceInApp(options);
+        builder.Add$ext_safeprojectname$StorageDbServiceInApp(options);
 
 
 

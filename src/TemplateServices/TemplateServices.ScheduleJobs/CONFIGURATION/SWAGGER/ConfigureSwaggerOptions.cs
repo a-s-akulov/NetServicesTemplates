@@ -21,6 +21,7 @@ public class ConfigureSwaggerOptions : IConfigureNamedOptions<SwaggerGenOptions>
 
     #endregion Поля
 
+
     #region Конструктор
 
     public ConfigureSwaggerOptions(IApiVersionDescriptionProvider provider)
@@ -29,6 +30,7 @@ public class ConfigureSwaggerOptions : IConfigureNamedOptions<SwaggerGenOptions>
     }
 
     #endregion Конструктор
+
 
     #region Методы
 
@@ -82,9 +84,9 @@ public class ConfigureSwaggerOptions : IConfigureNamedOptions<SwaggerGenOptions>
     {
         var info = new OpenApiInfo()
         {
-            Title = "Kat ScheduleJobs",
+            Title = "$ext_safeprojectname$ ScheduleJobs",
             Version = description.ApiVersion.ToString(),
-            Description = "Kat ScheduleJobs"
+            Description = "$ext_safeprojectname$ ScheduleJobs"
         };
 
         if (description.IsDeprecated)

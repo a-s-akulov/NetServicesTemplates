@@ -1,20 +1,20 @@
 ﻿using $safeprojectname$.Options;
-using KatServices.Common.Configuration;
+using $ext_safeprojectname$Services.Common.Configuration;
 
 
 namespace $safeprojectname$.Configuration;
 
 
 /// <summary>
-/// Расширения для интеграции KatStorageDbService в приложение
+/// Расширения для интеграции $ext_safeprojectname$StorageDbService в приложение
 /// </summary>
-public static class KatStorageDbServiceConfigurationHostingExtensions
+public static class $ext_safeprojectname$StorageDbServiceConfigurationHostingExtensions
 {
     #region Методы
 
-    public static IHostApplicationBuilder AddKatStorageDbServiceInApp(this IHostApplicationBuilder builder, AppOptions appOptions)
+    public static IHostApplicationBuilder Add$ext_safeprojectname$StorageDbServiceInApp(this IHostApplicationBuilder builder, AppOptions appOptions)
     {
-        builder.Services.AddKatStorageDbServiceInApp(appOptions.KatStorageDbService);
+        builder.Services.Add$ext_safeprojectname$StorageDbServiceInApp(appOptions.$ext_safeprojectname$StorageDbService);
 
         return builder;
     }

@@ -2,7 +2,7 @@
 using System.Diagnostics;
 using $safeprojectname$.RequestHandlers.Base;
 using $safeprojectname$.DTO.V1.Partners;
-using KatServices.Common.Services.PartnersService;
+using $ext_safeprojectname$Services.Common.Services.PartnersService;
 
 
 namespace $safeprojectname$.RequestHandlers.V1.Partners;

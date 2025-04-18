@@ -1,8 +1,8 @@
 ﻿using AutoMapper;
-using KatServices.Db.Entities;
+using $ext_safeprojectname$Services.Db.Entities;
 
 
-namespace $safeprojectname$.Services.KatStorageService.Mappers;
+namespace $safeprojectname$.Services.$ext_safeprojectname$StorageService.Mappers;
 
 
 public class BaseEntitiesMappingProfile : Profile

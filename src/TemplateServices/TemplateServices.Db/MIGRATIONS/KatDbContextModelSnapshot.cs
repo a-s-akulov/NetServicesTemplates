@@ -10,8 +10,8 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 namespace $safeprojectname$.Migrations
 {
-    [DbContext(typeof(KatDbContext))]
-    partial class KatDbContextModelSnapshot : ModelSnapshot
+    [DbContext(typeof($ext_safeprojectname$DbContext))]
+    partial class $ext_safeprojectname$DbContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)
         {

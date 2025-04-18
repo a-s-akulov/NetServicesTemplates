@@ -1,4 +1,4 @@
-﻿using KatServices.Common.Options.Base;
+﻿using $ext_safeprojectname$Services.Common.Options.Base;
 
 
 namespace $safeprojectname$.Options;
@@ -12,9 +12,9 @@ public class AppOptions
     public ApiConnectionOptions PartnersApiService { get; init; }
 
     /// <summary>
-    /// Настройка подключения к БД Kat
+    /// Настройка подключения к БД $ext_safeprojectname$
     /// </summary>
-    public DbConnectionOptions KatStorageDbService { get; init; }
+    public DbConnectionOptions $ext_safeprojectname$StorageDbService { get; init; }
 
     /// <summary>
     /// Настройка подключения к БД для Quartz

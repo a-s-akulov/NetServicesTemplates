@@ -2,7 +2,7 @@
 using Quartz;
 using System.Diagnostics;
 using $safeprojectname$.Options;
-using KatServices.Common.Services.Base;
+using $ext_safeprojectname$Services.Common.Services.Base;
 
 
 namespace $safeprojectname$.Jobs.Base;

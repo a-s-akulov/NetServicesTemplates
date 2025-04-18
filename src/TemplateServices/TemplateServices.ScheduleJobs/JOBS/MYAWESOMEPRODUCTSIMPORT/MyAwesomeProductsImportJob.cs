@@ -4,8 +4,8 @@ using Microsoft.Extensions.Options;
 using Quartz;
 using $safeprojectname$.Jobs.Base;
 using $safeprojectname$.Options;
-using KatServices.Common.Services.KatStorageService;
-using KatServices.Db.Entities;
+using $ext_safeprojectname$Services.Common.Services.$ext_safeprojectname$StorageService;
+using $ext_safeprojectname$Services.Db.Entities;
 
 
 namespace $safeprojectname$.Jobs;
@@ -18,7 +18,7 @@ public class MyAwesomeProductsImportJob : ScheduleJobBase<MyAwesomeProductsImpor
     public static readonly JobKey Key = new("my-awesome-products-import", "import-handlers");
 
 
-    private readonly IKatStorageService _katStorageService;
+    private readonly I$ext_safeprojectname$StorageService _storageService;
 
     #endregion Поля
 
@@ -26,11 +26,11 @@ public class MyAwesomeProductsImportJob : ScheduleJobBase<MyAwesomeProductsImpor
     #region Конструкторы
 
     public MyAwesomeProductsImportJob(
-            IKatStorageService katStorageService,
+            I$ext_safeprojectname$StorageService storageService,
             IOptions<AppOptions> appOptions, ILogger<MyAwesomeProductsImportJob> logger, IMapper mapper, ActivitySource activitySource) :
                 base(appOptions.Value.MyAwesomeProductsImportJob, logger, mapper, activitySource)
     {
-        _katStorageService = katStorageService;
+        _storageService = storageService;
     }
 
     #endregion Конструкторы

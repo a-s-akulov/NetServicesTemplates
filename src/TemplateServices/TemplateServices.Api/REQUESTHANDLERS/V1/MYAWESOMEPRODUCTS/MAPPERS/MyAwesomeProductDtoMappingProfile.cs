@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
 using $safeprojectname$.DTO.V1.MyAwesomeProducts;
-using KatServices.Db.Entities;
+using $ext_safeprojectname$Services.Db.Entities;
 
 
 namespace $safeprojectname$.RequestHandlers.V1.MyAwesomeProducts.Mappers;

@@ -11,7 +11,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 namespace $safeprojectname$.Migrations
 {
-    [DbContext(typeof(KatDbContext))]
+    [DbContext(typeof($ext_safeprojectname$DbContext))]
     [Migration("20250414112833_InitialCommit")]
     partial class InitialCommit
     {

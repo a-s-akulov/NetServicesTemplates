@@ -6,8 +6,6 @@
 /// </summary>
 public class ApiConnectionOptions : BaseConnectionOptions
 {
-    #region Свойства
-
     /// <summary>
     /// УРЛ хоста API
     /// </summary>
@@ -17,6 +15,4 @@ public class ApiConnectionOptions : BaseConnectionOptions
     /// Ключ авторизации
     /// </summary>
     public string ApiKey { get; init; } = string.Empty;
-
-    #endregion Свойства
 }

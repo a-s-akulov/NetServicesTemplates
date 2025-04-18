@@ -37,8 +37,8 @@
           <ProjectItem ReplaceParameters="true" TargetFileName="ExceptionMiddleware.cs">ExceptionMiddleware.cs</ProjectItem>
         </Folder>
         <Folder Name="!Services" TargetFolderName="!Services">
-          <Folder Name="KatStorageService" TargetFolderName="KatStorageService">
-            <ProjectItem ReplaceParameters="true" TargetFileName="KatStorageDbServiceConfigurationHostingExtensions.cs">KatStorageDbServiceConfigurationHostingExtensions.cs</ProjectItem>
+          <Folder Name="KatStorageService" TargetFolderName="$ext_safeprojectname$StorageService">
+            <ProjectItem ReplaceParameters="true" TargetFileName="$ext_safeprojectname$StorageDbServiceConfigurationHostingExtensions.cs">$ext_safeprojectname$StorageDbServiceConfigurationHostingExtensions.cs</ProjectItem>
           </Folder>
           <Folder Name="PartnersService" TargetFolderName="PartnersService">
             <ProjectItem ReplaceParameters="true" TargetFileName="PartnersApiServiceConfigurationHostingExtensions.cs">PartnersApiServiceConfigurationHostingExtensions.cs</ProjectItem>

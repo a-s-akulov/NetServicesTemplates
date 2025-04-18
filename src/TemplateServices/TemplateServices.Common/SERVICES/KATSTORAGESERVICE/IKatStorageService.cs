@@ -1,4 +1,4 @@
-﻿using KatServices.Db.Entities;
+﻿using $ext_safeprojectname$Services.Db.Entities;
 
 
 namespace $safeprojectname$.Services.KatStorageService;

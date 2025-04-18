@@ -1,28 +1,28 @@
 ﻿using AutoMapper;
 using $safeprojectname$.Services.Base;
 using System.Diagnostics;
-using KatServices.Db.Entities.Base;
+using $ext_safeprojectname$Services.Db.Entities.Base;
 using Microsoft.EntityFrameworkCore;
-using KatServices.Db.Context;
-using KatServices.Db.Entities;
+using $ext_safeprojectname$Services.Db.Context;
+using $ext_safeprojectname$Services.Db.Entities;
 
 
-namespace $safeprojectname$.Services.KatStorageService.Repository;
+namespace $safeprojectname$.Services.$ext_safeprojectname$StorageService.Repository;
 
 
-/// <inheritdoc cref="IKatStorageService"/>
-public class KatStorageDbService : ServiceBase, IKatStorageService
+/// <inheritdoc cref="I$ext_safeprojectname$StorageService"/>
+public class $ext_safeprojectname$StorageDbService : ServiceBase, I$ext_safeprojectname$StorageService
 {
     #region Поля
 
-    private readonly IDbContextFactory<KatDbContext> _storageDbFactory;
+    private readonly IDbContextFactory<$ext_safeprojectname$DbContext> _storageDbFactory;
 
     #endregion Поля
 
 
     #region Конструктор
 
-    public KatStorageDbService(IDbContextFactory<KatDbContext> storageDbFactory, ILogger<IKatStorageService> logger, IMapper mapper, ActivitySource activitySource) : base(logger, mapper, activitySource)
+    public $ext_safeprojectname$StorageDbService(IDbContextFactory<$ext_safeprojectname$DbContext> storageDbFactory, ILogger<I$ext_safeprojectname$StorageService> logger, IMapper mapper, ActivitySource activitySource) : base(logger, mapper, activitySource)
     {
         _storageDbFactory = storageDbFactory;
     }

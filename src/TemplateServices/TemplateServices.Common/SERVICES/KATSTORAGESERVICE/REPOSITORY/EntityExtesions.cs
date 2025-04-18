@@ -1,8 +1,8 @@
 ﻿using AutoMapper;
-using KatServices.Db.Entities.Base;
+using $ext_safeprojectname$Services.Db.Entities.Base;
 
 
-namespace $safeprojectname$.Services.KatStorageService.Repository;
+namespace $safeprojectname$.Services.$ext_safeprojectname$StorageService.Repository;
 
 
 public static class EntityExtesions

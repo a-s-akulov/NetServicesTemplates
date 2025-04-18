@@ -24,7 +24,7 @@
           <ProjectItem ReplaceParameters="true" TargetFileName="LogReturnClaimConfiguration.cs">LogReturnClaimConfiguration.cs</ProjectItem>
           <ProjectItem ReplaceParameters="true" TargetFileName="MyAwesomeProductConfiguration.cs">MyAwesomeProductConfiguration.cs</ProjectItem>
         </Folder>
-        <ProjectItem ReplaceParameters="true" TargetFileName="KatDbContext.cs">KatDbContext.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="$ext_safeprojectname$DbContext.cs">KatDbContext.cs</ProjectItem>
       </Folder>
       <Folder Name="Entities" TargetFolderName="Entities">
         <Folder Name="Base" TargetFolderName="Base">
@@ -48,7 +48,7 @@
         <ProjectItem ReplaceParameters="true" TargetFileName="20250414112833_InitialCommit.Designer.cs">20250414112833_InitialCommit.Designer.cs</ProjectItem>
         <ProjectItem ReplaceParameters="true" TargetFileName="20250414112852_QuartzInitialCommit.cs">20250414112852_QuartzInitialCommit.cs</ProjectItem>
         <ProjectItem ReplaceParameters="true" TargetFileName="20250414112852_QuartzInitialCommit.Designer.cs">20250414112852_QuartzInitialCommit.Designer.cs</ProjectItem>
-        <ProjectItem ReplaceParameters="true" TargetFileName="KatDbContextModelSnapshot.cs">KatDbContextModelSnapshot.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="$ext_safeprojectname$DbContextModelSnapshot.cs">KatDbContextModelSnapshot.cs</ProjectItem>
       </Folder>
       <ProjectItem ReplaceParameters="true" TargetFileName="DesignTimeContextFactory.cs">DesignTimeContextFactory.cs</ProjectItem>
     </Project>

@@ -2,17 +2,17 @@
 using System.Diagnostics;
 using $safeprojectname$.RequestHandlers.Base;
 using $safeprojectname$.DTO.V1.MyAwesomeProducts;
-using KatServices.Common.Services.KatStorageService;
+using $ext_safeprojectname$Services.Common.Services.$ext_safeprojectname$StorageService;
 
 
 namespace $safeprojectname$.RequestHandlers.V1.MyAwesomeProducts;
 
 
-public class GetProductsV1RequestHandler : RequestHandlerBase<IKatStorageService, GetProductsRequest, GetProductsResponse>
+public class GetProductsV1RequestHandler : RequestHandlerBase<I$ext_safeprojectname$StorageService, GetProductsRequest, GetProductsResponse>
 {
     #region Конструкторы
 
-    public GetProductsV1RequestHandler(IKatStorageService storageService, ILogger<GetProductsV1RequestHandler> logger, IMapper mapper, ActivitySource activitySource)
+    public GetProductsV1RequestHandler(I$ext_safeprojectname$StorageService storageService, ILogger<GetProductsV1RequestHandler> logger, IMapper mapper, ActivitySource activitySource)
                                                 : base(storageService, logger, mapper, activitySource)
     {
     }
