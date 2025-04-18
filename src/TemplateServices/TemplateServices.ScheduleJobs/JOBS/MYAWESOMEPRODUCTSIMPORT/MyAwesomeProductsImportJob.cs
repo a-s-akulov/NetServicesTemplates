@@ -60,8 +60,8 @@ public class MyAwesomeProductsImportJob : ScheduleJobBase<MyAwesomeProductsImpor
             try
             {
                 Log.LogInformation("Trying to import my awesome product with name " + $"'{sourceProduct.Name}' into storage...");
-                var storageProduct = sourceProduct; // Map.Map<MyAwesomeProduct>(sourceProduct);
-                var addOrUpdateResult = await _katStorageService.TryAddOrUpdate(storageProduct, cancellationToken: context.CancellationToken).ConfigureAwait(false);
+                var storageProduct = sourceProduct; // TODO: Switch to Map.Map<MyAwesomeProduct>(sourceProduct);
+                var addOrUpdateResult = await _storageService.TryAddOrUpdate(storageProduct, cancellationToken: context.CancellationToken).ConfigureAwait(false);
                 storageProduct = addOrUpdateResult.Entity;
 
 

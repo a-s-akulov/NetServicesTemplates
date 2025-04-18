@@ -87,7 +87,7 @@ public class $ext_safeprojectname$StorageDbService : ServiceBase, I$ext_safeproj
         }
         catch (Exception ex)
         {
-            var exception = new ScopedException(ex, nameof(IKatStorageService));
+            var exception = new ScopedException(ex, nameof(I$ext_safeprojectname$StorageService));
             tracingActivity?.SetStatus(ActivityStatusCode.Error, description: exception.ToString());
             Log.LogError(exception, ex.Message);
             throw exception;
@@ -137,7 +137,7 @@ public class $ext_safeprojectname$StorageDbService : ServiceBase, I$ext_safeproj
         }
         catch (Exception ex)
         {
-            var exception = new ScopedException(ex, nameof(IKatStorageService));
+            var exception = new ScopedException(ex, nameof(I$ext_safeprojectname$StorageService));
             tracingActivity?.SetStatus(ActivityStatusCode.Error, description: exception.ToString());
             Log.LogError(exception, ex.Message);
             throw exception;
@@ -170,7 +170,7 @@ public class $ext_safeprojectname$StorageDbService : ServiceBase, I$ext_safeproj
         }
         catch (Exception ex)
         {
-            var exception = new ScopedException(ex, nameof(IKatStorageService));
+            var exception = new ScopedException(ex, nameof(I$ext_safeprojectname$StorageService));
             tracingActivity?.SetStatus(ActivityStatusCode.Error, description: exception.ToString());
             Log.LogError(exception, ex.Message);
             throw exception;

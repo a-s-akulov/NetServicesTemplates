@@ -1,13 +1,13 @@
 ﻿using $ext_safeprojectname$Services.Db.Entities;
 
 
-namespace $safeprojectname$.Services.KatStorageService;
+namespace $safeprojectname$.Services.$ext_safeprojectname$StorageService;
 
 
 /// <summary>
-/// Сервис хранилища данных Kat
+/// Сервис хранилища данных $ext_safeprojectname$
 /// </summary>
-public interface IKatStorageService
+public interface I$ext_safeprojectname$StorageService
 {
     #region MyAwesomeProduct
 
