@@ -17,8 +17,12 @@
     <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="9.0.4" />
   </ItemGroup>
 
-    <ItemGroup>
-        <Using Include="Microsoft.Extensions.Logging" />
-    </ItemGroup>
+  <ItemGroup>
+    <Using Include="Microsoft.Extensions.Logging" />
+  </ItemGroup>
+
+  <Target Name="BuildEfPublishMigrationsScript" AfterTargets="AfterBuild">
+		<Exec Condition="'$(BuildingInsideVisualStudio)' == 'true'" Command="dotnet ef migrations script --startup-project $ext_safeprojectname$Services.Api --project $safeprojectname$ --idempotent --output &quot;$safeprojectname$\Migrations\PublishMigrationsScript.sql&quot;" WorkingDirectory="..\" />
+	</Target>
 
 </Project>
