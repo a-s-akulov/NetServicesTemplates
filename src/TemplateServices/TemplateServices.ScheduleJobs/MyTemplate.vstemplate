@@ -50,6 +50,12 @@
         <Folder Name="AutoMapper" TargetFolderName="AutoMapper">
           <ProjectItem ReplaceParameters="true" TargetFileName="AutoMapperConfigurationHostingExtensions.cs">AutoMapperConfigurationHostingExtensions.cs</ProjectItem>
         </Folder>
+        <Folder Name="Controllers" TargetFolderName="Controllers">
+          <ProjectItem ReplaceParameters="true" TargetFileName="ControllersConfigurationHostingExtensions.cs">ControllersConfigurationHostingExtensions.cs</ProjectItem>
+        </Folder>
+        <Folder Name="Metrics" TargetFolderName="Metrics">
+          <ProjectItem ReplaceParameters="true" TargetFileName="MetricsConfigurationHostingExtensions.cs">MetricsConfigurationHostingExtensions.cs</ProjectItem>
+        </Folder>
         <Folder Name="JsonSerializer" TargetFolderName="JsonSerializer">
           <ProjectItem ReplaceParameters="true" TargetFileName="JsonSerializerConfigurationHostingExtensions.cs">JsonSerializerConfigurationHostingExtensions.cs</ProjectItem>
         </Folder>

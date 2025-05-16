@@ -10,6 +10,7 @@ public static class AutoMapperConfigurationHostingExtensions
     {
         builder.Services.AddAutoMapperInApp();
 
+
         return builder;
     }
 }

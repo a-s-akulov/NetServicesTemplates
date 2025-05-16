@@ -15,6 +15,7 @@ public static class Startup
         builder.Services.AddHealthChecks();
         builder.Services.AddMemoryCache();
 
+        builder.AddControllersInApp();                                          // Controllers
         builder.AddJsonSerializerInApp();                                       // JsonSerializer
         builder.AddSwaggerInApp(options);                                       // Swagger
         builder.AddApiVersioningInApp();                                        // ApiVersioning
@@ -23,6 +24,7 @@ public static class Startup
         builder.AddAutoMapperInApp();                                           // AutoMapper
         builder.AddOpenTelemetryInApp();                                        // OpenTelemetry
         builder.AddQuartzInApp(options);                                        // Quartz
+        builder.AddMetricsInApp();                                              // Metrics
 
         builder.AddPartnersApiServiceInApp(options);
         builder.Add$ext_safeprojectname$StorageDbServiceInApp(options);
