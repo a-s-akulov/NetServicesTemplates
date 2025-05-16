@@ -12,6 +12,7 @@ public static class OpenTelemetryConfigurationHostingExtensions
             .AddAspNetCoreInstrumentation()
             .AddHttpClientInstrumentation()
             .AddSqlClientInstrumentation()
+            .AddPostgreSqlInstrumentation()
         );
 
 
