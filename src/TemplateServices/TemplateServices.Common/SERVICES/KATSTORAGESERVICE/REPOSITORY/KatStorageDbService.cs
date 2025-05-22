@@ -32,6 +32,73 @@ public class $ext_safeprojectname$StorageDbService : ServiceBase, I$ext_safeproj
 
     #region Методы
 
+    #region Common
+
+    /// <inheritdoc/>
+    public async Task<StorageDataMetrics> GetStorageDataMetrics(CancellationToken cancellationToken = default)
+    {
+        using var tracingActivity = Trace.StartActivity();
+
+        try
+        {
+            await using var entities = await _storageDbFactory.CreateDbContextAsync(cancellationToken: cancellationToken).ConfigureAwait(false);
+
+
+            // myAwesomeProductsAllCount
+            var myAwesomeProductsAllCount = await entities
+                .MyAwesomeProducts
+                .CountAsync(cancellationToken: cancellationToken)
+                .ConfigureAwait(false);
+
+            // myAwesomeProductsBooksAllCount
+            var myAwesomeProductsBooksAllCountProductTypesInclude = new enAwesomeProductType?[] {
+                enAwesomeProductType.Books
+            };
+            var myAwesomeProductsBooksAllCount = await entities
+                .MyAwesomeProducts
+                .CountAsync(x => myAwesomeProductsBooksAllCountProductTypesInclude.Contains(x.ProductType), cancellationToken: cancellationToken)
+                .ConfigureAwait(false);
+
+            // myAwesomeProductsFoodAllCount
+            var myAwesomeProductsFoodAllCountProductTypesInclude = new enAwesomeProductType?[] {
+                enAwesomeProductType.Food
+            };
+            var myAwesomeProductsFoodAllCount = await entities
+                .MyAwesomeProducts
+                .CountAsync(x => myAwesomeProductsFoodAllCountProductTypesInclude.Contains(x.ProductType), cancellationToken: cancellationToken)
+                .ConfigureAwait(false);
+
+            // myAwesomeProductsCarsAllCount
+            var myAwesomeProductsCarsAllCountProductTypesInclude = new enAwesomeProductType?[] {
+                enAwesomeProductType.Cars
+            };
+            var myAwesomeProductsCarsAllCount = await entities
+                .MyAwesomeProducts
+                .CountAsync(x => myAwesomeProductsCarsAllCountProductTypesInclude.Contains(x.ProductType), cancellationToken: cancellationToken)
+                .ConfigureAwait(false);
+
+
+            var result = new StorageDataMetrics()
+            {
+                MyAwesomeProductsAllCount = myAwesomeProductsAllCount,
+                MyAwesomeProductsBooksAllCount = myAwesomeProductsBooksAllCount,
+                MyAwesomeProductsFoodAllCount = myAwesomeProductsFoodAllCount,
+                MyAwesomeProductsCarsAllCount = myAwesomeProductsCarsAllCount
+            };
+            return result;
+        }
+        catch (Exception ex)
+        {
+            var exception = new ScopedException(ex, nameof(I$ext_safeprojectname$StorageService));
+            tracingActivity?.SetStatus(ActivityStatusCode.Error, description: exception.ToString());
+            Log.LogError(exception, ex.Message);
+            throw exception;
+        }
+    }
+
+    #endregion Common
+
+
     #region MyAwesomeProduct
 
     /// <inheritdoc/>
@@ -99,10 +166,12 @@ public class $ext_safeprojectname$StorageDbService : ServiceBase, I$ext_safeproj
     public async Task<List<MyAwesomeProduct>> GetMyAwesomeProducts(ICollection<Guid>? idsFilter = null, ICollection<enAwesomeProductType?>? productTypesFilter = null, bool includeReferences = false, bool includeLogs = false, CancellationToken cancellationToken = default)
     {
         using var tracingActivity = Trace.StartActivity();
-        await using var entities = await _storageDbFactory.CreateDbContextAsync(cancellationToken: cancellationToken).ConfigureAwait(false);
 
         try
         {
+            await using var entities = await _storageDbFactory.CreateDbContextAsync(cancellationToken: cancellationToken).ConfigureAwait(false);
+
+
             var query = entities.MyAwesomeProducts
                 .AsNoTracking();
 

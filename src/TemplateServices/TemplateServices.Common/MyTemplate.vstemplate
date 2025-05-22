@@ -32,6 +32,13 @@
           <ProjectItem ReplaceParameters="true" TargetFileName="ControllersConfigurationHostingExtensions.cs">ControllersConfigurationHostingExtensions.cs</ProjectItem>
         </Folder>
         <Folder Name="Metrics" TargetFolderName="Metrics">
+          <Folder Name="CustomMetrics" TargetFolderName="CustomMetrics">
+            <Folder Name="KatStorageDataMetrics" TargetFolderName="$ext_safeprojectname$StorageDataMetrics">
+              <ProjectItem ReplaceParameters="true" TargetFileName="$ext_safeprojectname$StorageDataMetricsCollectorHostedService.cs">KatStorageDataMetricsCollectorHostedService.cs</ProjectItem>
+              <ProjectItem ReplaceParameters="true" TargetFileName="$ext_safeprojectname$StorageDataMetricsConfigurationHostingExtensions.cs">KatStorageDataMetricsConfigurationHostingExtensions.cs</ProjectItem>
+              <ProjectItem ReplaceParameters="true" TargetFileName="$ext_safeprojectname$StorageDataMetricsRegistry.cs">KatStorageDataMetricsRegistry.cs</ProjectItem>
+            </Folder>
+          </Folder>
           <ProjectItem ReplaceParameters="true" TargetFileName="MetricsConfigurationHostingExtensions.cs">MetricsConfigurationHostingExtensions.cs</ProjectItem>
         </Folder>
         <Folder Name="JsonSerializer" TargetFolderName="JsonSerializer">
@@ -90,6 +97,7 @@
             <ProjectItem ReplaceParameters="true" TargetFileName="LogsMappingProfile.cs">LogsMappingProfile.cs</ProjectItem>
           </Folder>
           <Folder Name="Models" TargetFolderName="Models">
+            <ProjectItem ReplaceParameters="true" TargetFileName="StorageDataMetrics.cs">StorageDataMetrics.cs</ProjectItem>
             <ProjectItem ReplaceParameters="true" TargetFileName="TryAddOrUpdateBaseResult.cs">TryAddOrUpdateBaseResult.cs</ProjectItem>
           </Folder>
           <Folder Name="Repository" TargetFolderName="Repository">

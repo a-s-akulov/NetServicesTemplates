@@ -12,6 +12,11 @@ public interface I$ext_safeprojectname$StorageService
     #region MyAwesomeProduct
 
     /// <summary>
+    /// Получить метрики данных из хранилища
+    /// </summary>
+    public Task<StorageDataMetrics> GetStorageDataMetrics(CancellationToken cancellationToken = default);
+
+    /// <summary>
     /// Добавить или обновить базовую информацию о продукте
     /// </summary>
     public Task<TryAddOrUpdateBaseResult<MyAwesomeProduct>> TryAddOrUpdate(MyAwesomeProductBase recordToSet, CancellationToken cancellationToken = default);
