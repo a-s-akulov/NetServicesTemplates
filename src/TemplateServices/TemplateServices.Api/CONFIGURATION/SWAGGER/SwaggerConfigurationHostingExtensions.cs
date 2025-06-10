@@ -18,7 +18,8 @@ public static class SwaggerConfigurationHostingExtensions
         var xmlFilesPaths = new string[]
         {
             Path.Combine(AppContext.BaseDirectory, $"{Assembly.GetExecutingAssembly().GetName().Name}.xml"),
-            Path.Combine(AppContext.BaseDirectory, $"{typeof(Common.Configuration.OptionsConfigurationHostingExtensions).Assembly.GetName().Name}.xml")
+            Path.Combine(AppContext.BaseDirectory, $"{typeof(Common.Configuration.OptionsConfigurationHostingExtensions).Assembly.GetName().Name}.xml"),
+            Path.Combine(AppContext.BaseDirectory, $"{typeof(Db.Entities.Base.enLogOperation).Assembly.GetName().Name}.xml")
         };
         var commentsDocuments = new List<XDocument>();
         foreach (var xmlPath in xmlFilesPaths)
