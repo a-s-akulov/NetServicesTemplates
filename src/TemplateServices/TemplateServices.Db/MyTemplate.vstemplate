@@ -21,7 +21,7 @@
           <Folder Name="Base" TargetFolderName="Base">
             <ProjectItem ReplaceParameters="true" TargetFileName="LogEntityConfiguration.cs">LogEntityConfiguration.cs</ProjectItem>
           </Folder>
-          <ProjectItem ReplaceParameters="true" TargetFileName="LogReturnClaimConfiguration.cs">LogReturnClaimConfiguration.cs</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="LogMyAwesomeProductConfiguration.cs">LogMyAwesomeProductConfiguration.cs</ProjectItem>
           <ProjectItem ReplaceParameters="true" TargetFileName="MyAwesomeProductConfiguration.cs">MyAwesomeProductConfiguration.cs</ProjectItem>
         </Folder>
         <ProjectItem ReplaceParameters="true" TargetFileName="$ext_safeprojectname$DbContext.cs">KatDbContext.cs</ProjectItem>
@@ -29,6 +29,8 @@
       <Folder Name="Entities" TargetFolderName="Entities">
         <Folder Name="Base" TargetFolderName="Base">
           <ProjectItem ReplaceParameters="true" TargetFileName="enLogOperation.cs">enLogOperation.cs</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="EntityWithGuidBase.cs">EntityWithGuidBase.cs</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="IEntityWithGuid.cs">IEntityWithGuid.cs</ProjectItem>
           <ProjectItem ReplaceParameters="true" TargetFileName="IEntityWithLogs.cs">IEntityWithLogs.cs</ProjectItem>
           <ProjectItem ReplaceParameters="true" TargetFileName="ILogEntity.cs">ILogEntity.cs</ProjectItem>
         </Folder>

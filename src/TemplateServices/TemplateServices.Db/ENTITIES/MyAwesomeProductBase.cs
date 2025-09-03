@@ -1,15 +1,11 @@
-﻿
+﻿using $safeprojectname$.Entities.Base;
+
 
 namespace $safeprojectname$.Entities;
 
 
-public abstract class MyAwesomeProductBase
+public abstract class MyAwesomeProductBase : EntityWithGuidBase
 {
-    /// <summary>
-    /// ID
-    /// </summary>
-    public Guid Id { get; set; }
-
     /// <summary>
     /// Название продукта
     /// </summary>
