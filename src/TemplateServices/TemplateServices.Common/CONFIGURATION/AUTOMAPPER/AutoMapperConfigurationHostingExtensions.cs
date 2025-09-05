@@ -10,6 +10,7 @@ public static class AutoMapperConfigurationHostingExtensions
     public static IServiceCollection AddAutoMapperInApp(this IServiceCollection services)
     {
         services.AddAutoMapper(
+            opt => { },
             [
                 Assembly.GetEntryAssembly(),
                 Assembly.GetAssembly(typeof(AutoMapperConfigurationHostingExtensions))

@@ -26,7 +26,6 @@ namespace $safeprojectname$.Migrations.Base
             var initialScriptPathFull = Path.Combine("..", "$safeprojectname$", "Migrations", "Base", initialScriptPath);
             var initialScript = File.ReadAllText(initialScriptPathFull);
 
-            //migrationBuilder.Sql($"");
             initialScript = $"SET SEARCH_PATH TO '{quartzSchema}';\n"
                 + initialScript
                 + $"\nSET SEARCH_PATH TO '{defaultParentSchema}';";

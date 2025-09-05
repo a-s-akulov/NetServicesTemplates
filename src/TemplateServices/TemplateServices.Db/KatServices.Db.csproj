@@ -22,7 +22,10 @@
   </ItemGroup>
 
   <Target Name="BuildEfPublishMigrationsScript" AfterTargets="AfterBuild">
-		<Exec Condition="'$(BuildingInsideVisualStudio)' == 'true'" Command="dotnet ef migrations script --startup-project $ext_safeprojectname$Services.Api --project $safeprojectname$ --idempotent --output &quot;$safeprojectname$\Migrations\PublishMigrationsScript.sql&quot;" WorkingDirectory="..\" />
-	</Target>
+    <ItemGroup>
+      <EfMigrationsFiles Include="$(MSBuildProjectDirectory)\Migrations\*.cs" />
+    </ItemGroup>
+    <Exec Condition="'$(BuildingInsideVisualStudio)' == 'true' And '@(EfMigrationsFiles)' != ''" Command="dotnet ef migrations script --startup-project $ext_safeprojectname$Services.Api --project $(MSBuildProjectName) --idempotent --output &quot;$(MSBuildProjectDirectory)\Migrations\PublishMigrationsScript.sql&quot;" WorkingDirectory="..\" />
+  </Target>
 
 </Project>

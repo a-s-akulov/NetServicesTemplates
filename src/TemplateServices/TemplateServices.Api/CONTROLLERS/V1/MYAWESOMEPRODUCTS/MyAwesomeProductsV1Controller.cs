@@ -10,6 +10,7 @@ namespace $safeprojectname$.Controllers.V1.MyAwesomeProducts;
 
 
 [ApiVersion("1.0")]
+[ControllerName("Мой невероятный продукт")]
 [Route("api/v{version:apiVersion}/my-awesome-products")]
 public partial class MyAwesomeProductsV1Controller : ControllerInAppBase
 {

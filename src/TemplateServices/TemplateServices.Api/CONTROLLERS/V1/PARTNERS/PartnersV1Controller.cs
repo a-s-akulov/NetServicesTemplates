@@ -10,6 +10,7 @@ namespace $safeprojectname$.Controllers.V1.Partners;
 
 
 [ApiVersion("1.0")]
+[ControllerName("Партнёры")]
 [Route("api/v{version:apiVersion}/partners")]
 public partial class PartnersV1Controller : ControllerInAppBase
 {
