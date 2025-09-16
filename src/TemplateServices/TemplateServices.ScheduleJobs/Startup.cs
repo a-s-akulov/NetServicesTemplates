@@ -25,6 +25,7 @@ public static class Startup
         builder.AddOpenTelemetryInApp();                                        // OpenTelemetry
         builder.AddQuartzInApp(options);                                        // Quartz
         builder.AddMetricsInApp();                                              // Metrics
+        builder.AddDistributedCacheInApp(options);                              // Distributed cache
 
         builder.AddPartnersApiServiceInApp(options);
         builder.Add$ext_safeprojectname$StorageDbServiceInApp(options);

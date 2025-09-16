@@ -5,7 +5,13 @@ namespace $safeprojectname$.Options;
 
 
 public class AppOptions
-{
+{    
+    /// <summary>
+    /// Настройка распределённого кеша
+    /// </summary>
+    public DistributedCacheOptions DistributedCache { get; init; }
+
+
     /// <summary>
     /// Настройка подключения к API Partners
     /// </summary>

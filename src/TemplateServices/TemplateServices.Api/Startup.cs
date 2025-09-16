@@ -24,6 +24,7 @@ public static class Startup
         builder.AddMediatRInApp();                                              // MediatR
         builder.AddOpenTelemetryInApp();                                        // OpenTelemetry
         builder.AddMetricsInApp();                                              // Metrics
+        builder.AddDistributedCacheInApp(options);                              // Distributed cache
 
         builder.AddPartnersApiServiceInApp(options);
         builder.Add$ext_safeprojectname$StorageDbServiceInApp(options);
