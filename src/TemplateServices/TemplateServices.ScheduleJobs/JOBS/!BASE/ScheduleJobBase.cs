@@ -9,7 +9,7 @@ namespace $safeprojectname$.Jobs.Base;
 
 
 /// <summary>
-/// Базовая Реализация джобы IInventoriesCreatingJob
+/// Базовая реализация джобы IScheduleJob
 /// </summary>
 public abstract class ScheduleJobBase<TJob> : ServiceBase, IScheduleJob<TJob> where TJob : ScheduleJobBase<TJob>
 {

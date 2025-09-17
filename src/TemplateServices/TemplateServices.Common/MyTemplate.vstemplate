@@ -54,6 +54,7 @@
         <ProjectItem ReplaceParameters="true" TargetFileName="ExceptionExtensions.cs">ExceptionExtensions.cs</ProjectItem>
         <ProjectItem ReplaceParameters="true" TargetFileName="HttpClientExtensions.cs">HttpClientExtensions.cs</ProjectItem>
         <ProjectItem ReplaceParameters="true" TargetFileName="MemoryCacheExtensions.cs">MemoryCacheExtensions.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="StringExtensions.cs">StringExtensions.cs</ProjectItem>
         <ProjectItem ReplaceParameters="true" TargetFileName="TaskExtensions.cs">TaskExtensions.cs</ProjectItem>
         <ProjectItem ReplaceParameters="true" TargetFileName="TypeExtensions.cs">TypeExtensions.cs</ProjectItem>
       </Folder>
