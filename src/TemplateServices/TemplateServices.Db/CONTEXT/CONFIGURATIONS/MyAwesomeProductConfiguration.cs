@@ -13,7 +13,7 @@ public class MyAwesomeProductConfiguration : IEntityTypeConfiguration<MyAwesomeP
         entity.ToTable("my_awesome_products");
         entity.HasKey(e => e.Id);
 
-        ConfigreAtomic(entity);
+        ConfigureAtomic(entity);
 
         entity.HasMany(e => e.Logs)
             .WithOne(e => e.Entity)
@@ -22,7 +22,7 @@ public class MyAwesomeProductConfiguration : IEntityTypeConfiguration<MyAwesomeP
     }
 
 
-    public static void ConfigreAtomic(EntityTypeBuilder entityBuilder)
+    public static void ConfigureAtomic(EntityTypeBuilder entityBuilder)
     {
         entityBuilder.Property(nameof(MyAwesomeProduct.Id)).HasColumnName("id");
         entityBuilder.Property(nameof(MyAwesomeProduct.Name)).HasColumnName("name");

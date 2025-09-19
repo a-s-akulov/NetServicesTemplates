@@ -14,6 +14,6 @@ public class LogMyAwesomeProductConfiguration : LogEntityConfiguration<LogMyAwes
         entity.ToTable("log_my_awesome_products");
         entity.HasIndex(e => e.Id);
 
-        MyAwesomeProductConfiguration.ConfigreAtomic(entity);
+        MyAwesomeProductConfiguration.ConfigureAtomic(entity);
     }
 }
