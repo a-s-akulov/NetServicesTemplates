@@ -24,6 +24,7 @@ public static class AccessApiConfigurationHostingExtensions
             .AddAccessApiKey(optionsBuilder, ServiceLifetime.Singleton)
             .AddAccessApiBasic(optionsBuilder, ServiceLifetime.Singleton);
 
+
         return builder;
     }
 }

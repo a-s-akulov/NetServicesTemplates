@@ -11,6 +11,7 @@ public static class OptionsConfigurationHostingExtensions
     {
         var appOptions = builder.Services.ConfigureOptions<AppOptions>(builder.Configuration);
 
+
         return appOptions;
     }
 }

@@ -14,6 +14,7 @@ public static class PartnersApiServiceConfigurationHostingExtensions
     {
         builder.Services.AddPartnersApiServiceInApp(appOptions.PartnersApiService);
 
+
         return builder;
     }
 }

@@ -14,6 +14,7 @@ public static class $ext_safeprojectname$StorageDbServiceConfigurationHostingExt
     {
         builder.Services.Add$ext_safeprojectname$StorageDbServiceInApp(appOptions.$ext_safeprojectname$StorageDbService);
 
+
         return builder;
     }
 }

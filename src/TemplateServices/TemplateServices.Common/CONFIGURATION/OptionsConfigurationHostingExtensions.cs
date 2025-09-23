@@ -21,6 +21,7 @@ public static class OptionsConfigurationHostingExtensions
         var appOptions = configuration.Get<TOptions>() ?? throw new Exception($"Failed to configure {nameof(TOptions)}");
         services.AddSingleton(Microsoft.Extensions.Options.Options.Create<TOptions>(appOptions));
 
+
         return appOptions;
     }
 }

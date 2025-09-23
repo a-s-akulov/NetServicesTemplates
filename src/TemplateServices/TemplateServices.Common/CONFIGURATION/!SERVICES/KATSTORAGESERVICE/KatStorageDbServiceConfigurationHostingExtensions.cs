@@ -14,8 +14,6 @@ namespace $safeprojectname$.Configuration;
 /// </summary>
 public static class $ext_safeprojectname$StorageDbServiceConfigurationHostingExtensions
 {
-    #region Методы
-
     public static IServiceCollection Add$ext_safeprojectname$StorageDbServiceInApp(this IServiceCollection services, DbConnectionOptions dbConnectionOptions)
     {
         services.AddSingleton<I$ext_safeprojectname$StorageService, $ext_safeprojectname$StorageDbService > ();
@@ -38,8 +36,7 @@ public static class $ext_safeprojectname$StorageDbServiceConfigurationHostingExt
                 .EnableDetailedErrors();
         });
 
+
         return services;
     }
-
-    #endregion Методы
 }

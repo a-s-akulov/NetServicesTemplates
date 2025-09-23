@@ -15,8 +15,6 @@ namespace $safeprojectname$.Configuration;
 /// </summary>
 public static class PartnersApiServiceConfigurationHostingExtensions
 {
-    #region Методы
-
     public static IServiceCollection AddPartnersApiServiceInApp(this IServiceCollection services, ApiConnectionOptions apiConnectionOptions)
     {
         services.AddSingleton<IPartnersService, PartnersApiService>();
@@ -35,6 +33,7 @@ public static class PartnersApiServiceConfigurationHostingExtensions
             ) // Recreate connection every 2 minutes
             .SetHandlerLifetime(Timeout.InfiniteTimeSpan) // Disable rotation, as it is handled by PooledConnectionLifetime
             .AddPolicyHandler((serviceProvider, requestMessage) => GetOrCreateRetryPolicy(serviceProvider.GetRequiredService<IServiceScopeFactory>()));
+
 
         return services;
     }
@@ -91,6 +90,4 @@ public static class PartnersApiServiceConfigurationHostingExtensions
                 )
             );
     }
-
-    #endregion Методы
 }

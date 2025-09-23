@@ -22,6 +22,7 @@ public static class JsonSerializerConfigurationHostingExtensions
         services.AddSingleton(Microsoft.Extensions.Options.Options.Create(jsonSerializerOptions));
         services.AddSingleton<IJsonSerializerService, SystemTextJsonSerializerService>();
 
+
         return services;
     }
 }

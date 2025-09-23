@@ -57,7 +57,6 @@ public static class SwaggerConfigurationHostingExtensions
 
 
         builder.Services.ConfigureOptions<ConfigureSwaggerOptions>();
-
         return builder;
     }
 
