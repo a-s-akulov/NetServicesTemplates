@@ -58,6 +58,11 @@
         <ProjectItem ReplaceParameters="true" TargetFileName="TaskExtensions.cs">TaskExtensions.cs</ProjectItem>
         <ProjectItem ReplaceParameters="true" TargetFileName="TypeExtensions.cs">TypeExtensions.cs</ProjectItem>
       </Folder>
+      <Folder Name="Mappers" TargetFolderName="Mappers">
+        <Folder Name="!Base" TargetFolderName="!Base">
+          <ProjectItem ReplaceParameters="true" TargetFileName="CommonValueTransformers.cs">CommonValueTransformers.cs</ProjectItem>
+        </Folder>
+      </Folder>
       <Folder Name="Models" TargetFolderName="Models">
         <Folder Name="!Base" TargetFolderName="!Base">
           <ProjectItem ReplaceParameters="true" TargetFileName="ApiError.cs">ApiError.cs</ProjectItem>
