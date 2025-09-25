@@ -17,8 +17,11 @@
   <TemplateContent>
     <Project TargetFileName="$ext_safeprojectname$Services.Db.csproj" File="KatServices.Db.csproj" ReplaceParameters="true">
       <Folder Name="Context" TargetFolderName="Context">
+        <Folder Name="!Base" TargetFolderName="!Base">
+          <ProjectItem ReplaceParameters="true" TargetFileName="BaseLoggingEntitiesDbContext.cs">BaseLoggingEntitiesDbContext.cs</ProjectItem>
+        </Folder>
         <Folder Name="Configurations" TargetFolderName="Configurations">
-          <Folder Name="Base" TargetFolderName="Base">
+          <Folder Name="!Base" TargetFolderName="!Base">
             <ProjectItem ReplaceParameters="true" TargetFileName="LogEntityConfiguration.cs">LogEntityConfiguration.cs</ProjectItem>
           </Folder>
           <ProjectItem ReplaceParameters="true" TargetFileName="LogMyAwesomeProductConfiguration.cs">LogMyAwesomeProductConfiguration.cs</ProjectItem>

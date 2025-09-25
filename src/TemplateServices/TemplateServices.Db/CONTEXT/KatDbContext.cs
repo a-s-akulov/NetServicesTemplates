@@ -1,13 +1,14 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using $safeprojectname$.Context.Base;
 using $safeprojectname$.Entities;
 
 
 namespace $safeprojectname$.Context;
 
 
-public class $ext_safeprojectname$DbContext : DbContext
+public class $ext_safeprojectname$DbContext : BaseLoggingEntitiesDbContext
 {
-    public $ext_safeprojectname$DbContext(DbContextOptions<$ext_safeprojectname$DbContext> options)
+    public $ext_safeprojectname$DbContext(DbContextOptions options)
         : base(options)
     { }
 
@@ -25,4 +26,7 @@ public class $ext_safeprojectname$DbContext : DbContext
 
         modelBuilder.ApplyConfiguration(new Configurations.LogMyAwesomeProductConfiguration());
     }
+    
+
+    protected override object ConvertEntityToLog(object entity, Type sourceType, Type destinationType) => throw new InvalidOperationException("Auto logging is not implemented here");
 }

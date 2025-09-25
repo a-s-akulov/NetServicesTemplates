@@ -16,6 +16,7 @@ public class DesignTimeContextFactory : IDesignTimeDbContextFactory<$ext_safepro
         var optionsBuilder = new DbContextOptionsBuilder<$ext_safeprojectname$DbContext>();
         optionsBuilder.UseNpgsql();
 
+
         return new $ext_safeprojectname$DbContext(optionsBuilder.Options);
     }
 }

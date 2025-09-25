@@ -1,7 +1,6 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using $safeprojectname$.Options.Base;
 using Microsoft.EntityFrameworkCore;
-using $ext_safeprojectname$Services.Db.Context;
 using $safeprojectname$.Services.$ext_safeprojectname$StorageService;
 using $safeprojectname$.Services.$ext_safeprojectname$StorageService.Repository;
 
@@ -24,7 +23,7 @@ public static class $ext_safeprojectname$StorageDbServiceConfigurationHostingExt
             dbConnectionOptions.Password
         );
 
-        services.AddDbContextFactory<$ext_safeprojectname$DbContext > (opt =>
+        services.AddDbContextFactory<$ext_safeprojectname$AutoMapperConverterContext> (opt =>
         {
             opt.UseNpgsql(
                     connectionString,

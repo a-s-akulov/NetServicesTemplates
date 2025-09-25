@@ -112,6 +112,7 @@
           </Folder>
           <Folder Name="Repository" TargetFolderName="Repository">
             <ProjectItem ReplaceParameters="true" TargetFileName="EntityExtesions.cs">EntityExtesions.cs</ProjectItem>
+            <ProjectItem ReplaceParameters="true" TargetFileName="$ext_safeprojectname$AutoMapperConverterContext.cs">KatAutoMapperConverterContext.cs</ProjectItem>
             <ProjectItem ReplaceParameters="true" TargetFileName="$ext_safeprojectname$StorageDbService.cs">KatStorageDbService.cs</ProjectItem>
           </Folder>
           <ProjectItem ReplaceParameters="true" TargetFileName="I$ext_safeprojectname$StorageService.cs">IKatStorageService.cs</ProjectItem>

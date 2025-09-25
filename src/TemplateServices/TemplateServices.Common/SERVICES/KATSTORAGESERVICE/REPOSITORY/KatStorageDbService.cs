@@ -3,7 +3,6 @@ using $safeprojectname$.Services.Base;
 using System.Diagnostics;
 using $ext_safeprojectname$Services.Db.Entities.Base;
 using Microsoft.EntityFrameworkCore;
-using $ext_safeprojectname$Services.Db.Context;
 using $ext_safeprojectname$Services.Db.Entities;
 
 
@@ -15,14 +14,14 @@ public class $ext_safeprojectname$StorageDbService : ServiceBase, I$ext_safeproj
 {
     #region Поля
 
-    private readonly IDbContextFactory<$ext_safeprojectname$DbContext> _storageDbFactory;
+    private readonly IDbContextFactory<$ext_safeprojectname$AutoMapperConverterContext> _storageDbFactory;
 
     #endregion Поля
 
 
     #region Конструктор
 
-    public $ext_safeprojectname$StorageDbService(IDbContextFactory<$ext_safeprojectname$DbContext> storageDbFactory, ILogger<I$ext_safeprojectname$StorageService> logger, IMapper mapper, ActivitySource activitySource) : base(logger, mapper, activitySource)
+    public $ext_safeprojectname$StorageDbService(IDbContextFactory<$ext_safeprojectname$AutoMapperConverterContext> storageDbFactory, ILogger<I$ext_safeprojectname$StorageService> logger, IMapper mapper, ActivitySource activitySource) : base(logger, mapper, activitySource)
     {
         _storageDbFactory = storageDbFactory;
     }
@@ -109,7 +108,6 @@ public class $ext_safeprojectname$StorageDbService : ServiceBase, I$ext_safeproj
         try
         {
             await using var entities = await _storageDbFactory.CreateDbContextAsync(cancellationToken: cancellationToken).ConfigureAwait(false);
-            await using var transaction = await entities.Database.BeginTransactionAsync(cancellationToken: cancellationToken).ConfigureAwait(false);
 
 
             var existingRecord = await entities.MyAwesomeProducts
@@ -123,14 +121,6 @@ public class $ext_safeprojectname$StorageDbService : ServiceBase, I$ext_safeproj
                 var newRecord = Map.Map<MyAwesomeProduct>(recordToSet);
                 await entities.MyAwesomeProducts.AddAsync(newRecord, cancellationToken: cancellationToken).ConfigureAwait(false);
                 await entities.SaveChangesAsync(cancellationToken: cancellationToken).ConfigureAwait(false);
-
-                // LOG
-                logRecord = newRecord.ToLog<LogMyAwesomeProduct>(Map, enLogOperation.Add);
-                await entities.LogMyAwesomeProducts.AddAsync(logRecord, cancellationToken: cancellationToken).ConfigureAwait(false);
-
-
-                await entities.SaveChangesAsync(cancellationToken: cancellationToken).ConfigureAwait(false);
-                await transaction.CommitAsync(cancellationToken: cancellationToken).ConfigureAwait(false);
                 return new() { IsAdded = true, Entity = newRecord };
             }
 
@@ -144,12 +134,7 @@ public class $ext_safeprojectname$StorageDbService : ServiceBase, I$ext_safeproj
             existingRecord.Name = recordToSet.Name;
             existingRecord.ProductType = recordToSet.ProductType;
 
-            // LOG
-            logRecord = existingRecord.ToLog<LogMyAwesomeProduct>(Map, enLogOperation.Update);
-            await entities.LogMyAwesomeProducts.AddAsync(logRecord, cancellationToken: cancellationToken).ConfigureAwait(false);
-
             await entities.SaveChangesAsync(cancellationToken: cancellationToken).ConfigureAwait(false);
-            await transaction.CommitAsync(cancellationToken: cancellationToken).ConfigureAwait(false);
             return new() { IsUpdated = true, Entity = existingRecord };
         }
         catch (Exception ex)
@@ -229,10 +214,6 @@ public class $ext_safeprojectname$StorageDbService : ServiceBase, I$ext_safeproj
                 return false;
 
             entities.MyAwesomeProducts.Remove(existingRecord);
-
-            // LOG
-            var logRecord = existingRecord.ToLog<LogMyAwesomeProduct>(Map, enLogOperation.Remove);
-            await entities.LogMyAwesomeProducts.AddAsync(logRecord, cancellationToken: cancellationToken).ConfigureAwait(false);
 
             await entities.SaveChangesAsync(cancellationToken: cancellationToken).ConfigureAwait(false);
             return true;
