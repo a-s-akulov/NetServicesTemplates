@@ -1,5 +1,6 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Configuration;
+using $safeprojectname$.Options.Base;
 
 
 namespace $safeprojectname$.Configuration;
@@ -7,7 +8,7 @@ namespace $safeprojectname$.Configuration;
 
 public static class OptionsConfigurationHostingExtensions
 {
-    public static TOptions ConfigureOptions<TOptions>(this IServiceCollection services, IConfigurationManager configuration) where TOptions : class
+    public static TOptions ConfigureOptions<TOptions>(this IServiceCollection services, IConfigurationManager configuration) where TOptions : BaseAppOptions
     {
         configuration
             .AddJsonFile(

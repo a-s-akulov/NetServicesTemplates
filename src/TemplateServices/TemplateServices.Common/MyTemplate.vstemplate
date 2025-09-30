@@ -44,6 +44,9 @@
           </Folder>
           <ProjectItem ReplaceParameters="true" TargetFileName="MetricsConfigurationHostingExtensions.cs">MetricsConfigurationHostingExtensions.cs</ProjectItem>
         </Folder>
+        <Folder Name="Serilog" TargetFolderName="Serilog">
+          <ProjectItem ReplaceParameters="true" TargetFileName="SerilogConfigurationHostingExtensions.cs">SerilogConfigurationHostingExtensions.cs</ProjectItem>
+        </Folder>
         <Folder Name="JsonSerializer" TargetFolderName="JsonSerializer">
           <ProjectItem ReplaceParameters="true" TargetFileName="JsonSerializerConfigurationHostingExtensions.cs">JsonSerializerConfigurationHostingExtensions.cs</ProjectItem>
         </Folder>
@@ -84,6 +87,7 @@
         <Folder Name="!Base" TargetFolderName="!Base">
           <ProjectItem ReplaceParameters="true" TargetFileName="AccessContextOptions.cs">AccessContextOptions.cs</ProjectItem>
           <ProjectItem ReplaceParameters="true" TargetFileName="ApiConnectionOptions.cs">ApiConnectionOptions.cs</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="BaseAppOptions.cs">BaseAppOptions.cs</ProjectItem>
           <ProjectItem ReplaceParameters="true" TargetFileName="BaseConnectionOptions.cs">BaseConnectionOptions.cs</ProjectItem>
           <ProjectItem ReplaceParameters="true" TargetFileName="DbConnectionOptions.cs">DbConnectionOptions.cs</ProjectItem>
         </Folder>

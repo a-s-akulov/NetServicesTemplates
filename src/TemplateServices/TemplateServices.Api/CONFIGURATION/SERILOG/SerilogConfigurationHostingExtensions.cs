@@ -1,6 +1,5 @@
 ﻿using $safeprojectname$.Options;
-using Microsoft.Extensions.Options;
-using Serilog;
+using $ext_safeprojectname$Services.Common.Configuration;
 
 
 namespace $safeprojectname$.Configuration;
@@ -8,14 +7,9 @@ namespace $safeprojectname$.Configuration;
 
 public static class SerilogConfigurationHostingExtensions
 {
-    public static IHostApplicationBuilder AddSerilogInApp(this WebApplicationBuilder builder)
+    public static IHostApplicationBuilder AddSerilogInApp(this WebApplicationBuilder builder, AppOptions appOptions)
     {
-        builder.Host.UseSerilog((context, services, configuration) =>
-        {
-            configuration.ReadFrom.Configuration(context.Configuration)
-                .ReadFrom.Services(services)
-                .Enrich.WithProperty("App", services.GetRequiredService<IOptions<AppOptions>>().Value.ServiceName);
-        });
+        builder.Services.AddSerilogInApp(builder.Configuration, appOptions);
 
 
         return builder;

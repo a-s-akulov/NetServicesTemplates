@@ -4,7 +4,7 @@
 namespace $safeprojectname$.Options;
 
 
-public class AppOptions
+public class AppOptions : BaseAppOptions
 {    
     /// <summary>
     /// Настройка распределённого кеша
@@ -34,17 +34,6 @@ public class AppOptions
     /// </summary>
     public ScheduleJobOptions MyAwesomeProductsImportJob { get; init; }
 
-
-
-    /// <summary>
-    /// Название приложения
-    /// </summary>
-    public string ServiceName { get; init; }
-
-    /// <summary>
-    /// Постфикс базового адреса сервиса
-    /// </summary>
-    public string HostPostfix { get; set; } = string.Empty;
 
     /// <summary>
     /// Настройки для подключения к сервису AccessAPI

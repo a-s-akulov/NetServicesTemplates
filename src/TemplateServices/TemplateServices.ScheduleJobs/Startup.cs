@@ -19,7 +19,7 @@ public static class Startup
         builder.AddJsonSerializerInApp();                                       // JsonSerializer
         builder.AddSwaggerInApp(options);                                       // Swagger
         builder.AddApiVersioningInApp();                                        // ApiVersioning
-        builder.AddSerilogInApp();                                              // Serilog
+        builder.AddSerilogInApp(options);                                       // Serilog
         builder.AddAccessApiAuthenticationInApp(options);                       // AccessApi
         builder.AddAutoMapperInApp();                                           // AutoMapper
         builder.AddOpenTelemetryInApp();                                        // OpenTelemetry
