@@ -29,6 +29,10 @@
         </Folder>
         <ProjectItem ReplaceParameters="true" TargetFileName="$ext_safeprojectname$DbContext.cs">KatDbContext.cs</ProjectItem>
       </Folder>
+      <Folder Name="Design" TargetFolderName="Design">
+        <ProjectItem ReplaceParameters="true" TargetFileName="AppCSharpMigrationOperationGenerator.cs">AppCSharpMigrationOperationGenerator.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="DesignTimeContextFactory.cs">DesignTimeContextFactory.cs</ProjectItem>
+      </Folder>
       <Folder Name="Entities" TargetFolderName="Entities">
         <Folder Name="Base" TargetFolderName="Base">
           <ProjectItem ReplaceParameters="true" TargetFileName="enLogOperation.cs">enLogOperation.cs</ProjectItem>
@@ -44,6 +48,9 @@
         <ProjectItem ReplaceParameters="true" TargetFileName="MyAwesomeProduct.cs">MyAwesomeProduct.cs</ProjectItem>
         <ProjectItem ReplaceParameters="true" TargetFileName="MyAwesomeProductBase.cs">MyAwesomeProductBase.cs</ProjectItem>
       </Folder>
+      <Folder Name="Extensions" TargetFolderName="Extensions">
+        <ProjectItem ReplaceParameters="true" TargetFileName="EntityBuilderExtensions.cs">EntityBuilderExtensions.cs</ProjectItem>
+      </Folder>
       <Folder Name="Migrations" TargetFolderName="Migrations">
         <Folder Name="Base" TargetFolderName="Base">
           <ProjectItem ReplaceParameters="true" TargetFileName="QuartsPostgresInitialScript.sql">QuartsPostgresInitialScript.sql</ProjectItem>
@@ -55,7 +62,6 @@
         <ProjectItem ReplaceParameters="true" TargetFileName="20250414112852_QuartzInitialCommit.Designer.cs">20250414112852_QuartzInitialCommit.Designer.cs</ProjectItem>
         <ProjectItem ReplaceParameters="true" TargetFileName="$ext_safeprojectname$DbContextModelSnapshot.cs">KatDbContextModelSnapshot.cs</ProjectItem>
       </Folder>
-      <ProjectItem ReplaceParameters="true" TargetFileName="DesignTimeContextFactory.cs">DesignTimeContextFactory.cs</ProjectItem>
     </Project>
   </TemplateContent>
 </VSTemplate>

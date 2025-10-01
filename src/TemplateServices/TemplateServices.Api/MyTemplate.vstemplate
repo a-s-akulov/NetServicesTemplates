@@ -99,6 +99,9 @@
           </Folder>
         </Folder>
       </Folder>
+      <Folder Name="Design" TargetFolderName="Design">
+        <ProjectItem ReplaceParameters="true" TargetFileName="AppEFCoreDesignTimeServices.cs">AppEFCoreDesignTimeServices.cs</ProjectItem>
+      </Folder>
       <Folder Name="DTO" TargetFolderName="DTO">
         <Folder Name="V1" TargetFolderName="V1">
           <Folder Name="MyAwesomeProducts" TargetFolderName="MyAwesomeProducts">

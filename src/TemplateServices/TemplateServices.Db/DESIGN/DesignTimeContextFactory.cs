@@ -1,9 +1,9 @@
-﻿using Microsoft.EntityFrameworkCore.Design;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Design;
 using $safeprojectname$.Context;
 
 
-namespace $safeprojectname$;
+namespace $safeprojectname$.Design;
 
 
 /// <summary>
@@ -14,7 +14,10 @@ public class DesignTimeContextFactory : IDesignTimeDbContextFactory<$ext_safepro
     public $ext_safeprojectname$DbContext CreateDbContext(string[] args)
     {
         var optionsBuilder = new DbContextOptionsBuilder<$ext_safeprojectname$DbContext>();
-        optionsBuilder.UseNpgsql();
+        optionsBuilder
+            .UseNpgsql()
+            .EnableSensitiveDataLogging()
+            .EnableDetailedErrors();
 
 
         return new $ext_safeprojectname$DbContext(optionsBuilder.Options);

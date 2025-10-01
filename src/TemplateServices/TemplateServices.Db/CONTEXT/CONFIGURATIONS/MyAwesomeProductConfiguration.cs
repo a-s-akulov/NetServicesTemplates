@@ -18,7 +18,7 @@ public class MyAwesomeProductConfiguration : IEntityTypeConfiguration<MyAwesomeP
         entity.HasMany(e => e.Logs)
             .WithOne(e => e.Entity)
             .HasForeignKey(e => e.Id)
-            .OnDelete(DeleteBehavior.NoAction);
+            .WithNoDatabaseForeignKey();
     }
 
 

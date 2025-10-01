@@ -67,7 +67,7 @@ public abstract class BaseLoggingEntitiesDbContext : DbContext
 
     private void HandleEntitiesLogs()
     {
-        foreach (var entry in ChangeTracker.Entries())
+        foreach (var entry in ChangeTracker.Entries().ToList())
         {
             switch (entry.State)
             {
@@ -106,6 +106,19 @@ public abstract class BaseLoggingEntitiesDbContext : DbContext
 
         var logs = reflectionInfo.LogsPropertyInfo.GetValue(entity) ?? throw new InvalidOperationException($"Not found value for '{nameof(IEntityWithLogs<ILogEntity>.Logs)}' property");
         reflectionInfo.LogsAddMethodInfo.Invoke(logs, [logRecordToAdd]);
+        //switch (logOperation)
+        //{
+        //    case enLogOperation.Add:
+        //    case enLogOperation.Update:
+        //        var logs = reflectionInfo.LogsPropertyInfo.GetValue(entity) ?? throw new InvalidOperationException($"Not found value for '{nameof(IEntityWithLogs<ILogEntity>.Logs)}' property");
+        //        reflectionInfo.LogsAddMethodInfo.Invoke(logs, [logRecordToAdd]);
+        //        break;
+        //    case enLogOperation.Remove:
+        //        Add(logRecordToAdd);
+        //        break;
+        //    default:
+        //        throw new InvalidOperationException($"Invalid log operation type '{logOperation}'");
+        //}
 
 
         return true;
