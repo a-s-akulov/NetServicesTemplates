@@ -1,6 +1,6 @@
 using Medallion.Threading;
 using Medallion.Threading.Redis;
-using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Caching.Hybrid;
 using StackExchange.Redis;
 using $safeprojectname$.Options;
 
@@ -17,6 +17,18 @@ public static class DistributedCacheConfigurationHostingExtensions
         var redisDatabase = redisConnection.GetDatabase();
         var provider = new RedisDistributedSynchronizationProvider(redisDatabase);
 
+        // Distributed cache
+        services.AddStackExchangeRedisCache(opt =>opt.ConfigurationOptions = redisOptions);
+        services.AddHybridCache(opt =>
+        {
+            opt.DefaultEntryOptions = new HybridCacheEntryOptions
+            {
+                Expiration = TimeSpan.FromHours(1),
+                LocalCacheExpiration = TimeSpan.FromHours(1)
+            };
+        });
+
+        // Distributed lock
         services.AddSingleton<IDistributedLockProvider>(provider);
         services.AddSingleton<IDistributedReaderWriterLockProvider>(provider);
         services.AddSingleton<IDistributedSemaphoreProvider>(provider);
