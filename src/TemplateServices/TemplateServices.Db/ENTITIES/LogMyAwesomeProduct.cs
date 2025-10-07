@@ -10,7 +10,7 @@ public class LogMyAwesomeProduct : MyAwesomeProductBase, ILogEntity<MyAwesomePro
     public Guid LogId { get; set; }
 
     /// <inheritdoc/>
-    public DateTime ChangedDate { get; set; }
+    public DateTimeOffset ChangedDate { get; set; }
 
     /// <inheritdoc/>
     public enLogOperation ChangedOperation { get; set; }

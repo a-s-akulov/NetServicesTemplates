@@ -1,5 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
+using $safeprojectname$.Context.Configurations.Base;
+using $safeprojectname$.Entities.Base;
 
 
 namespace $safeprojectname$.Extensions;
@@ -21,4 +23,12 @@ public static class EntityBuilderExtensions
         referenceCollectionBuilder
             .HasConstraintName("with-no-db-fk")
             .OnDelete(DeleteBehavior.ClientNoAction);
+
+
+    public static EntityTypeBuilder DateTimeOffsetProperty(this EntityTypeBuilder entityBuilder, string propertyName, string fieldsPrefix) =>
+        entityBuilder.OwnsOne(
+            typeof(DateTimeOffsetDb),
+            propertyName,
+            opt => DateTimeOffsetBaseConfiguration.ConfigureAtomic(opt, fieldsPrefix)
+        );
 }

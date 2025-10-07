@@ -18,10 +18,10 @@ public class LogsMappingProfile : Profile
 }
 
 
-public class LogChangedDateValueResolver : IValueResolver<object, object, DateTime>
+public class LogChangedDateValueResolver : IValueResolver<object, object, DateTimeOffset>
 {
-    public DateTime Resolve(object src, object dst, DateTime _, ResolutionContext context)
+    public DateTimeOffset Resolve(object src, object dst, DateTimeOffset _, ResolutionContext context)
     {
-        return DateTime.UtcNow;
+        return DateTimeOffset.UtcNow;
     }
 }

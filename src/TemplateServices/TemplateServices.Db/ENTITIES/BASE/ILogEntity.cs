@@ -10,8 +10,9 @@ public interface ILogEntity
 
     /// <summary>
     /// Дата и время изменения сущности
+    /// <br/>UTC
     /// </summary>
-    public DateTime ChangedDate { get; set; }
+    public DateTimeOffset ChangedDate { get; set; }
 
     /// <summary>
     /// Тип операции изменения сущности
