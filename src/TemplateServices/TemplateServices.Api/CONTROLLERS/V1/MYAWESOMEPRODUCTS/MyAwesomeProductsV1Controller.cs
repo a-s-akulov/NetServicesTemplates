@@ -39,7 +39,7 @@ public partial class MyAwesomeProductsV1Controller : ControllerInAppBase
     [ProducesDefaultResponseType(typeof(ApiResponse<GetProductResponse>))]
     [ProducesResponseType(typeof(ApiResponse<GetProductResponse>), StatusCodes.Status200OK)]
     [ProducesResponseType(typeof(ApiResponse<GetProductResponse>), StatusCodes.Status404NotFound)]
-    public Task<ActionResult<ApiResponse<GetProductResponse>>> GetProduct(Guid id, CancellationToken cancellationToken = default) =>
+    public Task<ActionResult<ApiResponse<GetProductResponse>>> GetProduct(long id, CancellationToken cancellationToken = default) =>
         HandleRequest<GetProductRequest, ApiResponse<GetProductResponse>>(new GetProductRequest() { Id = id }, cancellationToken);
 
     [HttpPut]
@@ -58,7 +58,7 @@ public partial class MyAwesomeProductsV1Controller : ControllerInAppBase
     [ProducesDefaultResponseType(typeof(ApiResponse<DeleteProductResponse>))]
     [ProducesResponseType(typeof(ApiResponse<DeleteProductResponse>), StatusCodes.Status200OK)]
     [ProducesResponseType(typeof(ApiResponse<DeleteProductResponse>), StatusCodes.Status404NotFound)]
-    public Task<ActionResult<ApiResponse<DeleteProductResponse>>> DeleteProduct(Guid id, CancellationToken cancellationToken = default) =>
+    public Task<ActionResult<ApiResponse<DeleteProductResponse>>> DeleteProduct(long id, CancellationToken cancellationToken = default) =>
         HandleRequest<DeleteProductRequest, ApiResponse<DeleteProductResponse>>(new DeleteProductRequest() { Id = id }, cancellationToken);
 
     #endregion Методы

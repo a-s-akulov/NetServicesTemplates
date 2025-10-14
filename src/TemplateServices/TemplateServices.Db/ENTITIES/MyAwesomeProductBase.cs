@@ -4,7 +4,7 @@
 namespace $safeprojectname$.Entities;
 
 
-public abstract class MyAwesomeProductBase : EntityWithGuidBase
+public abstract class MyAwesomeProductBase : EntityWithLongIdBase
 {
     /// <summary>
     /// Название продукта

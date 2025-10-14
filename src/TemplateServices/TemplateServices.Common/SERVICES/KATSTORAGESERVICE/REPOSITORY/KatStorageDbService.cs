@@ -148,7 +148,7 @@ public class $ext_safeprojectname$StorageDbService : ServiceBase, I$ext_safeproj
 
 
     /// <inheritdoc/>
-    public async Task<List<MyAwesomeProduct>> GetMyAwesomeProducts(ICollection<Guid>? idsFilter = null, ICollection<enAwesomeProductType?>? productTypesFilter = null, bool includeReferences = false, bool includeLogs = false, CancellationToken cancellationToken = default)
+    public async Task<List<MyAwesomeProduct>> GetMyAwesomeProducts(ICollection<long>? idsFilter = null, ICollection<enAwesomeProductType?>? productTypesFilter = null, bool includeReferences = false, bool includeLogs = false, CancellationToken cancellationToken = default)
     {
         using var tracingActivity = Trace.StartActivity();
 
@@ -200,7 +200,7 @@ public class $ext_safeprojectname$StorageDbService : ServiceBase, I$ext_safeproj
 
 
     /// <inheritdoc/>
-    public async Task<bool> DeleteMyAwesomeProduct(Guid id, CancellationToken cancellationToken = default)
+    public async Task<bool> DeleteMyAwesomeProduct(long id, CancellationToken cancellationToken = default)
     {
         using var tracingActivity = Trace.StartActivity();
 

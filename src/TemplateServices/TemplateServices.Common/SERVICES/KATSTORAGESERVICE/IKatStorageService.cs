@@ -24,12 +24,12 @@ public interface I$ext_safeprojectname$StorageService
     /// <summary>
     /// Получить продукты
     /// </summary>
-    public Task<List<MyAwesomeProduct>> GetMyAwesomeProducts(ICollection<Guid>? idsFilter = null, ICollection<enAwesomeProductType?>? productTypesFilter = null, bool includeReferences = false, bool includeLogs = false, CancellationToken cancellationToken = default);
+    public Task<List<MyAwesomeProduct>> GetMyAwesomeProducts(ICollection<long>? idsFilter = null, ICollection<enAwesomeProductType?>? productTypesFilter = null, bool includeReferences = false, bool includeLogs = false, CancellationToken cancellationToken = default);
 
     /// <summary>
     /// Удалить продукт
     /// </summary>
-    public Task<bool> DeleteMyAwesomeProduct(Guid id, CancellationToken cancellationToken = default);
+    public Task<bool> DeleteMyAwesomeProduct(long id, CancellationToken cancellationToken = default);
 
     #endregion MyAwesomeProduct
 }

@@ -13,6 +13,7 @@ public static class DateTimeOffsetBaseConfiguration
         entityBuilder.Property(nameof(DateTimeOffsetDb.DateTimeUtc)).HasColumnName($"{columnPrefix}date_time_utc");
         entityBuilder.Property(nameof(DateTimeOffsetDb.TimeZoneOffset)).HasColumnName($"{columnPrefix}time_zone_offset");
         
+        
         return entityBuilder;
     }
 }

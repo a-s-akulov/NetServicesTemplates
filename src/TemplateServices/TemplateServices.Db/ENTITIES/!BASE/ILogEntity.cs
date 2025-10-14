@@ -6,7 +6,7 @@ public interface ILogEntity
     /// <summary>
     /// ID записи лога
     /// </summary>
-    public Guid LogId { get; set; }
+    public long LogId { get; set; }
 
     /// <summary>
     /// Дата и время изменения сущности

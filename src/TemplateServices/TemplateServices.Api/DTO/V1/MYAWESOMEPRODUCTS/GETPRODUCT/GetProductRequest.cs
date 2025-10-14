@@ -6,5 +6,5 @@ public class GetProductRequest : ApiRequest
     /// <summary>
     /// ID Продукта
     /// </summary>
-    public Guid Id { get; set; }
+    public long Id { get; set; }
 }

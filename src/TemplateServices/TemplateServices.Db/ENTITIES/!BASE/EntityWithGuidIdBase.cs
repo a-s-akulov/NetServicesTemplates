@@ -1,7 +1,7 @@
 ﻿namespace $safeprojectname$.Entities.Base;
 
 
-public abstract class EntityWithGuidBase : IEntityWithGuid
+public abstract class EntityWithGuidIdBase : IEntityWithGuidId
 {
     /// <inheritdoc/>
     public Guid Id { get; set; }

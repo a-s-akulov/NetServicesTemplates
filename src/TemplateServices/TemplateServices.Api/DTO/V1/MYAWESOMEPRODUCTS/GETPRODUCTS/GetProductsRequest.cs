@@ -17,7 +17,7 @@ public class GetProductsRequestFilters
     /// <summary>
     /// Идентификаторы продуктов
     /// </summary>
-    public ICollection<Guid>? Ids { get; set; }
+    public ICollection<long>? Ids { get; set; }
 
 
     /// <summary>

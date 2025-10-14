@@ -1,7 +1,7 @@
 ﻿namespace $safeprojectname$.Entities.Base;
 
 
-public interface IEntityWithGuid
+public interface IEntityWithGuidId
 {
     /// <summary>
     /// Идентификатор сущности

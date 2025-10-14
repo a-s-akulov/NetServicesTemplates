@@ -18,7 +18,7 @@ public class MyAwesomeProductToPut
     /// <summary>
     /// ID
     /// </summary>
-    public Guid Id { get; set; }
+    public long Id { get; set; }
 
     /// <summary>
     /// Название продукта

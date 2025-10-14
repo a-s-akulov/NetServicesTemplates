@@ -22,9 +22,12 @@
         </Folder>
         <Folder Name="Configurations" TargetFolderName="Configurations">
           <Folder Name="!Base" TargetFolderName="!Base">
+            <ProjectItem ReplaceParameters="true" TargetFileName="DateTimeOffsetBaseConfiguration.cs">DateTimeOffsetBaseConfiguration.cs</ProjectItem>
             <ProjectItem ReplaceParameters="true" TargetFileName="LogEntityConfiguration.cs">LogEntityConfiguration.cs</ProjectItem>
           </Folder>
-          <ProjectItem ReplaceParameters="true" TargetFileName="LogMyAwesomeProductConfiguration.cs">LogMyAwesomeProductConfiguration.cs</ProjectItem>
+          <Folder Name="!Logs" TargetFolderName="!Logs">
+            <ProjectItem ReplaceParameters="true" TargetFileName="LogMyAwesomeProductConfiguration.cs">LogMyAwesomeProductConfiguration.cs</ProjectItem>
+          </Folder>
           <ProjectItem ReplaceParameters="true" TargetFileName="MyAwesomeProductConfiguration.cs">MyAwesomeProductConfiguration.cs</ProjectItem>
         </Folder>
         <ProjectItem ReplaceParameters="true" TargetFileName="$ext_safeprojectname$DbContext.cs">KatDbContext.cs</ProjectItem>
@@ -34,17 +37,22 @@
         <ProjectItem ReplaceParameters="true" TargetFileName="DesignTimeContextFactory.cs">DesignTimeContextFactory.cs</ProjectItem>
       </Folder>
       <Folder Name="Entities" TargetFolderName="Entities">
-        <Folder Name="Base" TargetFolderName="Base">
+        <Folder Name="!Base" TargetFolderName="!Base">
+          <ProjectItem ReplaceParameters="true" TargetFileName="DateTimeOffsetDb.cs">DateTimeOffsetDb.cs</ProjectItem>
           <ProjectItem ReplaceParameters="true" TargetFileName="enLogOperation.cs">enLogOperation.cs</ProjectItem>
-          <ProjectItem ReplaceParameters="true" TargetFileName="EntityWithGuidBase.cs">EntityWithGuidBase.cs</ProjectItem>
-          <ProjectItem ReplaceParameters="true" TargetFileName="IEntityWithGuid.cs">IEntityWithGuid.cs</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="EntityWithGuidIdBase.cs">EntityWithGuidIdBase.cs</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="EntityWithLongIdBase.cs">EntityWithLongIdBase.cs</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="IEntityWithGuidId.cs">IEntityWithGuidId.cs</ProjectItem>
           <ProjectItem ReplaceParameters="true" TargetFileName="IEntityWithLogs.cs">IEntityWithLogs.cs</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="IEntityWithLongId.cs">IEntityWithLongId.cs</ProjectItem>
           <ProjectItem ReplaceParameters="true" TargetFileName="ILogEntity.cs">ILogEntity.cs</ProjectItem>
         </Folder>
-        <Folder Name="Enums" TargetFolderName="Enums">
+        <Folder Name="!Enums" TargetFolderName="!Enums">
           <ProjectItem ReplaceParameters="true" TargetFileName="enAwesomeProductType.cs">enAwesomeProductType.cs</ProjectItem>
         </Folder>
-        <ProjectItem ReplaceParameters="true" TargetFileName="LogMyAwesomeProduct.cs">LogMyAwesomeProduct.cs</ProjectItem>
+        <Folder Name="!Logs" TargetFolderName="!Logs">
+          <ProjectItem ReplaceParameters="true" TargetFileName="LogMyAwesomeProduct.cs">LogMyAwesomeProduct.cs</ProjectItem>
+        </Folder>
         <ProjectItem ReplaceParameters="true" TargetFileName="MyAwesomeProduct.cs">MyAwesomeProduct.cs</ProjectItem>
         <ProjectItem ReplaceParameters="true" TargetFileName="MyAwesomeProductBase.cs">MyAwesomeProductBase.cs</ProjectItem>
       </Folder>
