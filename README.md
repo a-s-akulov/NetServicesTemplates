@@ -15,6 +15,6 @@
 	4.4. Setup selected template by setting solution name (Note, that to solution name will be appended "**Services**" postfix)
 	4.5. Press "Create" button to create projects
 5. (optional) To adjust all namespaces to file-area style execute following regex replacement for all sultion:
-	expression `namespace\s+(.*?);\s*\n[/\w]`
-	replace with `expression namespace $1;\n\n\n$2`
+	expression `namespace\s+(.*?);\s*\n([/\w])`
+	replace with expression `namespace $1;\r\n\r\n\r\n$2`
 
