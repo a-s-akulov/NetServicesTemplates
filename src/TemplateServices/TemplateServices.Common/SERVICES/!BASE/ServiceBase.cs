@@ -44,4 +44,17 @@ public abstract class ServiceBase
     protected DateTime NowSystemDate => DateTime.UtcNow; // UTC
 
     #endregion Свойства
+
+
+    #region Методы
+
+    protected Exception HandleOperationException(Exception ex, string exceptionScope, Activity? tracingActivity)
+    {
+        var exception = new ScopedException(ex, exceptionScope);
+        tracingActivity?.SetStatus(ActivityStatusCode.Error, description: exception.ToString());
+        Log.LogError(exception, ex.Message);
+        return exception;
+    }
+
+    #endregion Методы
 }
