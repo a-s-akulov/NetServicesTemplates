@@ -98,7 +98,7 @@
         <ProjectItem ReplaceParameters="true" TargetFileName="AppOptions.cs">AppOptions.cs</ProjectItem>
         <ProjectItem ReplaceParameters="true" TargetFileName="ScheduleJobOptions.cs">ScheduleJobOptions.cs</ProjectItem>
       </Folder>
-      <ProjectItem ReplaceParameters="false" TargetFileName="Dockerfile">Dockerfile</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Dockerfile">Dockerfile</ProjectItem>
       <ProjectItem ReplaceParameters="true" TargetFileName="Program.cs">Program.cs</ProjectItem>
       <ProjectItem ReplaceParameters="true" TargetFileName="Startup.cs">Startup.cs</ProjectItem>
     </Project>
